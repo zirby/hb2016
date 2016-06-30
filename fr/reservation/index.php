@@ -38,8 +38,8 @@ while($res = $req->fetch()){
 <h2>Réservation - <span style="color: red">HandBall</span></h2>
 
 <div class="col-md-7">
-<img src="../../img/cd2016_600.jpg" alt="la salle" class="img-rounded displayed" usemap="#map-cd2016_600"/>
-<map name="map-cd2016_600" id="map-cd2016_600">
+<img src="../../img/hb2016_600_z.jpg" alt="la salle" class="img-rounded displayed" usemap="#map-hb2016_600"/>
+<map name="map-hb2016_600" id="map-hb2016_600">
 <area id="bloc_a" alt="" title="" href="#" shape="rect" coords="155,266,209,345" />
 <area id="bloc_b" alt="" title="" href="#" shape="rect" coords="158,223,207,260" />
 <area id="bloc_c" alt="" title="" href="#" shape="rect" coords="160,181,205,218" />
@@ -89,7 +89,7 @@ while($res = $req->fetch()){
         <div class="col-md-12 text-left sp_30"><em>1. CLIQUEZ SUR UN BLOC</em></div>
     </div>
     <div class="row">
-        <div class="col-md-7 text-left"  data-toggle="tooltip" data-placement="top" title="le nombre de places peu changer en + ou en -"><h5>Places disponibles*</h5></div>
+        <div class="col-md-7 text-left"  data-toggle="tooltip" data-placement="top" title="le nombre de places peu changer en + ou en -"><h5>Places disponibles*</h5><span>places à visibilté réduite</span></div>
         <div class="col-md-5" id="pBloc"></div>
     </div>
     <div class="row">
@@ -98,12 +98,12 @@ while($res = $req->fetch()){
     <div class="row">
         <div class="col-md-12 text-left sp_30"><em>2. INDIQUEZ LE NOMBRE DE PLACES</em></div>
     </div>
-    <div class="row">
+    <div class="row sp_50">
         <div class="col-md-6 text-left"><h5>Adultes</h5></div>
         <div class="col-md-4" id="pPriceAd"></div>
         <div class="col-md-2"><input id="inputPlaces" type="text" class="form-control" value="0"></div>
     </div>
-    <div class="row">
+    <div class="row sp_50">
         <div class="col-md-6 text-left"><h5>Enfants</h5></div>
         <div class="col-md-4" id="pPriceEn"></div>
         <div class="col-md-2"><input id="inputPlacesHalf" type="text" class="form-control" value="0"></div>
