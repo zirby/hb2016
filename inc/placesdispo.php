@@ -5,11 +5,12 @@ $result = array();
 
 $bloc = $_GET['bloc'];
 
+$bloc_name = strtoupper (str_replace("_", " ", $bloc));
 
-
-$req = $pdo->prepare("SELECT * FROM cd16_blocs WHERE name=? ");
-$req->execute([$bloc]);
+$req = $pdo->prepare("SELECT * FROM hb16_blocs WHERE name=? ");
+$req->execute([$bloc_name]);
 $places = $req->fetch();
+
 
 
 $result['bloc']= $places->name;

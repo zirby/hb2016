@@ -23,6 +23,7 @@ function selectBloc(bloc) {
         "type": "POST",
         "dataType": "json",
         "success": function (data) {
+            console.log(data);
             $("#helpZone").text("");
             placeDispo = data.nb;
             if (placeDispo <= 0) {
@@ -32,8 +33,7 @@ function selectBloc(bloc) {
                 
                 $("#inputPlaces").val(0);
                 $("#inputPlacesHalf").val(0);
-                $("#inputPlacesAbn").val(0);
-                $("#inputPlacesAbnHalf").val(0);
+
                 $("#inputTotal").val(0);
                 placeBloc = data.bloc;
                 placeZone = data.zone;
@@ -44,20 +44,15 @@ function selectBloc(bloc) {
                 $("#pZone").html(data.zone);
                 $("#pBloc").html("<button class='btn btn-" + data.color + "' type='button'>" + data.bloc + " <span class='badge'>" + data.nb + "</span></button>");
                 
-                $("#pPriceAbAd").html(data.price_abn + ".00 €");
-                $("#pPriceAbEn").html(data.price_abn_half + ".00 €");
                 $("#pPriceAd").html(data.price + ".00 €");
                 $("#pPriceEn").html(data.price_half + ".00 €");
                 
-                priceAbn = data.price_abn;
-                priceAbnHalf = data.price_abn_half;
                 priceUnit = data.price;
                 priceUnitHalf = data.price_half;
                 
                 $("#inputPlaces").val(1);
                 $("#inputPlacesHalf").val(0);
-                $("#inputPlacesAbn").val(0);
-                $("#inputPlacesAbnHalf").val(0);
+
                 $("#inputTotal").val(priceUnit);
 
                 priceTot = priceUnit;
@@ -72,24 +67,21 @@ function selectBloc(bloc) {
     });
 }
 
-function doSum(nbPlace, pricePlace, nbPlaceHalf, pricePlaceHalf, nbPlaceAbn, pricePlaceAbn, nbPlaceAbnHalf, pricePlaceAbnHalf) {
+function doSum(nbPlace, pricePlace, nbPlaceHalf, pricePlaceHalf) {
     if (nbPlace.length === 0)  nbPlace = 0;
     if (nbPlaceHalf.length === 0)  nbPlaceHalf = 0;
-    if (nbPlaceAbn.length === 0)  nbPlaceAbn = 0;
-    if (nbPlaceAbnHalf.length === 0)  nbPlaceAbnHalf = 0;
+
     
     full = parseInt(nbPlace) * parseInt(pricePlace);
     half = parseInt(nbPlaceHalf) * parseInt(pricePlaceHalf);
-    Abnfull = parseInt(nbPlaceAbn) * parseInt(pricePlaceAbn);
-    Abnhalf = parseInt(nbPlaceAbnHalf) * parseInt(pricePlaceAbnHalf);
-    return full + half + Abnfull + Abnhalf;
+
+    return full + half ;
 }
-function printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf){
+function printSum(priceUnit, priceUnitHalf){
         placeFullNb = ($("#inputPlaces").val()==="") ? 0 : $("#inputPlaces").val();
         placeHalfNb = ($("#inputPlacesHalf").val()==="") ? 0 : $("#inputPlacesHalf").val();
-        placeAbnFullNb = ($("#inputPlacesAbn").val()==="") ? 0 : $("#inputPlacesAbn").val();
-        placeAbnHalfNb = ($("#inputPlacesAbnHalf").val()==="") ? 0 : $("#inputPlacesAbnHalf").val();
-        placeNb = parseInt(placeFullNb) + parseInt(placeHalfNb)+parseInt(placeAbnFullNb) + parseInt(placeAbnHalfNb);
+
+        placeNb = parseInt(placeFullNb) + parseInt(placeHalfNb);
         
         console.log(placeNb);
         if(placeNb > 0){
@@ -99,7 +91,7 @@ function printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf){
             }else{
                 $('#salleHelp').html("");
                 $('#btnReserver').show();
-                priceTot = doSum(placeFullNb, priceUnit, placeHalfNb, priceUnitHalf, placeAbnFullNb, priceAbn, placeAbnHalfNb,priceAbnHalf);
+                priceTot = doSum(placeFullNb, priceUnit, placeHalfNb, priceUnitHalf);
                 $("#inputTotal").val(priceTot);            
             }
         }else{
@@ -137,56 +129,56 @@ $('[data-toggle="tooltip"]').tooltip()
     lejour = $("#jour").text();
 /****************** click blocs*******************/
 $("#bloc_a").click(function () {selectBloc("bloc_a");});
-    $("#bloc_b").click(function () {selectBloc("bloc_b");});
-    $("#bloc_c").click(function () {selectBloc("bloc_c");});
-    $("#bloc_d").click(function () {selectBloc("bloc_d");});
-    $("#bloc_f").click(function () {selectBloc("bloc_f");});
-    $("#bloc_f0").click(function () {selectBloc("bloc_f0");});
-    $("#bloc_e").click(function () {selectBloc("bloc_e");});
-    $("#bloc_e0").click(function () {selectBloc("bloc_e0");});
-    // Zone bleue sup
-    $("#bloc_a_sup").click(function () {selectBloc("bloc_a_sup");});
-    $("#bloc_b_sup").click(function () {selectBloc("bloc_b_sup");});
-    $("#bloc_c_sup").click(function () {selectBloc("bloc_c_sup");});
-    $("#bloc_d_sup").click(function () {selectBloc("bloc_d_sup");});
-    $("#bloc_e_sup").click(function () {selectBloc("bloc_e_sup");});
-    // Zone rouge
-    $("#bloc_g").click(function () {selectBloc("bloc_g");});
-    $("#bloc_h").click(function () {selectBloc("bloc_h");});
-    $("#bloc_i").click(function () {selectBloc("bloc_i");});
-    $("#bloc_j").click(function () {selectBloc("bloc_j");});
-    $("#bloc_k").click(function () {selectBloc("bloc_k");});
-    $("#bloc_z").click(function () {selectBloc("bloc_z");});
-    $("#bloc_z0").click(function () {selectBloc("bloc_z0");});
-    // Zone rouge sup
-    $("#bloc_g_sup").click(function () {selectBloc("bloc_g_sup");});
-    $("#bloc_h_sup").click(function () {selectBloc("bloc_h_sup");});
-    $("#bloc_i_sup").click(function () {selectBloc("bloc_i_sup");});
-    $("#bloc_j_sup").click(function () {selectBloc("bloc_j_sup");});
-    $("#bloc_k_sup").click(function () {selectBloc("bloc_k_sup");});
-    $("#bloc_z_sup").click(function () {selectBloc("bloc_z_sup");});
-    $("#bloc_z0_sup").click(function () {selectBloc("bloc_z0_sup");});
-    // Zone jaune
-    $("#bloc_l").click(function () {selectBloc("bloc_l");});
-    $("#bloc_m").click(function () {selectBloc("bloc_m");});
-    $("#bloc_n").click(function () {selectBloc("bloc_n");});
-    $("#bloc_o").click(function () {selectBloc("bloc_o");});
-    $("#bloc_p").click(function () {selectBloc("bloc_p");});
-    $("#bloc_q").click(function () {selectBloc("bloc_q");});
-    $("#bloc_r").click(function () {selectBloc("bloc_r");});
-    // Zone jaune sup
-    $("#bloc_l_sup").click(function () {selectBloc("bloc_l_sup");});
-    $("#bloc_m_sup").click(function () {selectBloc("bloc_m_sup");});
-    $("#bloc_n_sup").click(function () {selectBloc("bloc_n_sup");});
-    $("#bloc_o_sup").click(function () {selectBloc("bloc_o_sup");});
-    $("#bloc_p_sup").click(function () {selectBloc("bloc_p_sup");});
-    // Zone noire 
-    $("#bloc_x").click(function () {selectBloc("bloc_x");});
-    $("#bloc_v").click(function () {selectBloc("bloc_v");});
-    $("#bloc_u").click(function () {selectBloc("bloc_u");});
-    $("#bloc_t").click(function () {selectBloc("bloc_t");});
-    $("#bloc_s").click(function () {selectBloc("bloc_s");});
-    /**************************************************/
+$("#bloc_b").click(function () {selectBloc("bloc_b");});
+$("#bloc_c").click(function () {selectBloc("bloc_c");});
+$("#bloc_d").click(function () {selectBloc("bloc_d");});
+$("#bloc_f").click(function () {selectBloc("bloc_f");});
+$("#bloc_f0").click(function () {selectBloc("bloc_f0");});
+$("#bloc_e").click(function () {selectBloc("bloc_e");});
+$("#bloc_e0").click(function () {selectBloc("bloc_e0");});
+// Zone bleue sup
+$("#bloc_a_sup").click(function () {selectBloc("bloc_a_sup");});
+$("#bloc_b_sup").click(function () {selectBloc("bloc_b_sup");});
+$("#bloc_c_sup").click(function () {selectBloc("bloc_c_sup");});
+$("#bloc_d_sup").click(function () {selectBloc("bloc_d_sup");});
+$("#bloc_e_sup").click(function () {selectBloc("bloc_e_sup");});
+// Zone rouge
+$("#bloc_g").click(function () {selectBloc("bloc_g");});
+$("#bloc_h").click(function () {selectBloc("bloc_h");});
+$("#bloc_i").click(function () {selectBloc("bloc_i");});
+$("#bloc_j").click(function () {selectBloc("bloc_j");});
+$("#bloc_k").click(function () {selectBloc("bloc_k");});
+$("#bloc_z").click(function () {selectBloc("bloc_z");});
+$("#bloc_z0").click(function () {selectBloc("bloc_z0");});
+// Zone rouge sup
+$("#bloc_g_sup").click(function () {selectBloc("bloc_g_sup");});
+$("#bloc_h_sup").click(function () {selectBloc("bloc_h_sup");});
+$("#bloc_i_sup").click(function () {selectBloc("bloc_i_sup");});
+$("#bloc_j_sup").click(function () {selectBloc("bloc_j_sup");});
+$("#bloc_k_sup").click(function () {selectBloc("bloc_k_sup");});
+$("#bloc_z_sup").click(function () {selectBloc("bloc_z_sup");});
+$("#bloc_z0_sup").click(function () {selectBloc("bloc_z0_sup");});
+// Zone jaune
+$("#bloc_l").click(function () {selectBloc("bloc_l");});
+$("#bloc_m").click(function () {selectBloc("bloc_m");});
+$("#bloc_n").click(function () {selectBloc("bloc_n");});
+$("#bloc_o").click(function () {selectBloc("bloc_o");});
+$("#bloc_p").click(function () {selectBloc("bloc_p");});
+$("#bloc_q").click(function () {selectBloc("bloc_q");});
+$("#bloc_r").click(function () {selectBloc("bloc_r");});
+// Zone jaune sup
+$("#bloc_l_sup").click(function () {selectBloc("bloc_l_sup");});
+$("#bloc_m_sup").click(function () {selectBloc("bloc_m_sup");});
+$("#bloc_n_sup").click(function () {selectBloc("bloc_n_sup");});
+$("#bloc_o_sup").click(function () {selectBloc("bloc_o_sup");});
+$("#bloc_p_sup").click(function () {selectBloc("bloc_p_sup");});
+// Zone noire 
+$("#bloc_x").click(function () {selectBloc("bloc_x");});
+$("#bloc_v").click(function () {selectBloc("bloc_v");});
+$("#bloc_u").click(function () {selectBloc("bloc_u");});
+$("#bloc_t").click(function () {selectBloc("bloc_t");});
+$("#bloc_s").click(function () {selectBloc("bloc_s");});
+/**************************************************/
 
     $('#inputPlaces').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });  
     $('#inputPlacesHalf').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });

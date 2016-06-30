@@ -2,13 +2,13 @@
 if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
-require_once 'inc/conn.php';
+require_once '../../inc/conn.php';
 
 unset($_SESSION['priceTot']);
 unset($_SESSION['placeFullNb']);
 unset($_SESSION['placeHalfNb']);
 
-unset($_SESSION['placeBloc']);
+unset($_SESSION['placeBLOC']);
 unset($_SESSION['type']);
 unset($_SESSION['resId']);
 
@@ -19,10 +19,10 @@ $req->execute();
 
 while($res = $req->fetch()){
     $reqReserv = $pdo->prepare("SELECT SUM(nbplaces) as splaces, SUM(nbplaces_half) as splaces_half FROM hb16_reservations WHERE bloc=?  AND supprime_le IS NULL");
-    $reqReserv->execute(array( $res->name));
+    $reqReserv->execute(array($res->name));
     $resReserv = $reqReserv->fetch();
     $somme = intval($resReserv->splaces) - intval($resReserv->splaces_half);
-    //echo $Ubloc." = ".$res->max_org." & ".$somme."<br />";
+    //echo $UBLOC." = ".$res->max org." & ".$somme."<br />";
     if($somme == 0){
         $reqUpdate=$pdo->prepare("UPDATE hb16_blocs SET places=max WHERE name=?" );
         $reqUpdate->execute(array($res->name));
@@ -38,8 +38,8 @@ while($res = $req->fetch()){
 <h2>Réservation - <span style="color: red">HandBall</span></h2>
 
 <div class="col-md-7">
-<img src="../../img/hb2016_600.jpg" alt="la salle" class="img-rounded displayed" usemap="#map-hb2016_600"/>
-<map name="map-hb2016_600" id="map-hb2016_600">
+<img src="../../img/cd2016_600.jpg" alt="la salle" class="img-rounded displayed" usemap="#map-cd2016_600"/>
+<map name="map-cd2016_600" id="map-cd2016_600">
 <area id="bloc_a" alt="" title="" href="#" shape="rect" coords="155,266,209,345" />
 <area id="bloc_b" alt="" title="" href="#" shape="rect" coords="158,223,207,260" />
 <area id="bloc_c" alt="" title="" href="#" shape="rect" coords="160,181,205,218" />
@@ -86,14 +86,17 @@ while($res = $req->fetch()){
 <div class="col-md-5">
 
     <div class="row">
-        <div class="col-md-12 text-left"><em>1. CLIQUEZ SUR UN BLOC</em></div>
+        <div class="col-md-12 text-left sp_30"><em>1. CLIQUEZ SUR UN BLOC</em></div>
     </div>
     <div class="row">
         <div class="col-md-7 text-left"  data-toggle="tooltip" data-placement="top" title="le nombre de places peu changer en + ou en -"><h5>Places disponibles*</h5></div>
         <div class="col-md-5" id="pBloc"></div>
     </div>
     <div class="row">
-        <div class="col-md-12 text-left"><em>2. INDIQUEZ LE NOMBRE DE PLACES</em></div>
+        <div class="col-md-12 text-left" style="height:50px;"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-left sp_30"><em>2. INDIQUEZ LE NOMBRE DE PLACES</em></div>
     </div>
     <div class="row">
         <div class="col-md-6 text-left"><h5>Adultes</h5></div>
@@ -114,6 +117,9 @@ while($res = $req->fetch()){
                 <span class="input-group-addon">.00 €</span>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-left sp_50"></div>
     </div>
     <div class="row">
         <div class="col-md-12" id="salleHelp"></div>
