@@ -11,8 +11,8 @@ $index = "index.php";
 if(isset($_SESSION['resId'])){
     header('Location: '.$index);
 }else{
-    $req = $pdo->prepare("INSERT INTO hb16_reservations SET user_id = ?, jour = ?, type = ?, bloc = ?, nbplaces = ?, nbplaces_half = ?, montant = ?, reserve_le = NOW()");
-    $req->execute([$_SESSION['auth']->id,$_SESSION['jour'],$_SESSION['type'],$_SESSION['placeBloc'],$_SESSION['placeFullNb'],$_SESSION['placeHalfNb'],$_SESSION['priceTot']]);
+    $req = $pdo->prepare("INSERT INTO hb16_reservations SET user_id = ?, type = ?, bloc = ?, nbplaces = ?, nbplaces_half = ?, montant = ?, reserve_le = NOW()");
+    $req->execute([$_SESSION['auth']->id,$_SESSION['type'],$_SESSION['placeBloc'],$_SESSION['placeFullNb'],$_SESSION['placeHalfNb'],$_SESSION['priceTot']]);
     $reservationId = $pdo->lastInsertId();
     
     if($reservationId > 0){

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Mer 29 Juin 2016 à 16:30
+-- Généré le :  Jeu 30 Juin 2016 à 18:08
 -- Version du serveur :  5.5.38
 -- Version de PHP :  5.6.2
 
@@ -46,48 +46,61 @@ CREATE TABLE `hb16_blocs` (
 --
 
 INSERT INTO `hb16_blocs` (`name`, `max`, `max_org`, `places`, `places_org`, `zone`, `price`, `price_half`, `price_abn`, `price_abn_half`, `color`, `id`) VALUES
-('BLOC A', 249, 0, 78, -92, 'Zone bleue', 42, 22, 92, 47, 'primary', 1),
-('BLOC A SUP', 103, 0, 0, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 2),
-('BLOC B', 121, 0, 0, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 3),
-('BLOC B SUP', 141, 0, -14, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 4),
-('BLOC C', 127, 0, 0, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 5),
-('BLOC C SUP', 179, 0, -53, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 6),
-('BLOC D', 256, 0, -92, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 7),
-('BLOC D SUP', 121, 0, -8, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 8),
-('BLOC E', 78, 0, 0, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 9),
-('BLOC E0', 102, 0, 0, 0, 'Zone Bleue', 42, 22, 92, 47, 'primary', 10),
+('BLOC A', 249, 0, 249, -92, 'Zone bleue', 42, 22, 92, 47, 'primary', 1),
+('BLOC A SUP', 103, 0, 103, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 2),
+('BLOC B', 121, 0, 121, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 3),
+('BLOC B SUP', 141, 0, 141, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 4),
+('BLOC C', 127, 0, 127, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 5),
+('BLOC C SUP', 179, 0, 179, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 6),
+('BLOC D', 256, 0, 256, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 7),
+('BLOC D SUP', 121, 0, 121, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 8),
+('BLOC E', 78, 0, 78, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 9),
+('BLOC E0', 102, 0, 102, 0, 'Zone Bleue', 42, 22, 92, 47, 'primary', 10),
 ('BLOC E SUP', 0, 0, 0, 0, 'Zone bleue sup', 42, 22, 92, 47, 'primary', 11),
-('BLOC F', 102, 0, 0, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 12),
-('BLOC F0', 78, 0, 0, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 13),
-('BLOC G', 117, 0, -25, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 14),
-('BLOC G SUP', 160, 0, 0, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 15),
-('BLOC H', 130, 0, -125, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 16),
-('BLOC H SUP', 122, 0, 0, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 17),
-('BLOC I', 48, 0, -48, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 18),
-('BLOC I SUP', 178, 0, 0, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 19),
-('BLOC J', 130, 0, -73, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 20),
-('BLOC J SUP', 114, 0, 0, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 21),
-('BLOC K', 116, 0, -4, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 22),
-('BLOC K SUP', 123, 0, 0, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 23),
-('BLOC L', 115, 0, 0, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 24),
-('BLOC L SUP', 122, 0, 0, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 25),
-('BLOC M', 120, 0, 0, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 26),
-('BLOC M SUP', 119, 0, 0, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 27),
-('BLOC N', 109, 0, 0, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 28),
-('BLOC N SUP', 179, 0, -40, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 29),
-('BLOC O', 121, 0, 0, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 30),
-('BLOC O SUP', 142, 0, 0, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 31),
-('BLOC P', 116, 0, 0, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 32),
+('BLOC F', 102, 0, 102, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 12),
+('BLOC F0', 78, 0, 78, 0, 'Zone bleue', 42, 22, 92, 47, 'primary', 13),
+('BLOC G', 117, 0, 117, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 14),
+('BLOC G SUP', 160, 0, 160, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 15),
+('BLOC H', 130, 0, 130, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 16),
+('BLOC H SUP', 122, 0, 122, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 17),
+('BLOC I', 48, 0, 48, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 18),
+('BLOC I SUP', 178, 0, 178, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 19),
+('BLOC J', 130, 0, 130, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 20),
+('BLOC J SUP', 114, 0, 114, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 21),
+('BLOC K', 116, 0, 116, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 22),
+('BLOC K SUP', 123, 0, 123, 0, 'Zone rouge sup', 42, 22, 92, 47, 'danger', 23),
+('BLOC L', 115, 0, 114, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 24),
+('BLOC L SUP', 122, 0, 122, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 25),
+('BLOC M', 120, 0, 120, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 26),
+('BLOC M SUP', 119, 0, 119, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 27),
+('BLOC N', 109, 0, 108, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 28),
+('BLOC N SUP', 179, 0, 179, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 29),
+('BLOC O', 121, 0, 121, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 30),
+('BLOC O SUP', 142, 0, 142, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 31),
+('BLOC P', 116, 0, 116, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 32),
 ('BLOC P SUP', 0, 0, 0, 0, 'Zone jaune sup', 42, 22, 92, 47, 'warning', 33),
-('BLOC Q', 146, 0, 0, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 34),
-('BLOC R', 146, 0, -50, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 35),
-('BLOC S', 76, 0, 0, 0, 'Zone noire', 42, 22, 92, 47, 'default', 36),
-('BLOC T', 93, 0, -29, 0, 'Zone noire', 42, 22, 92, 47, 'default', 37),
-('BLOC U', 200, 0, 0, 0, 'Zone noire', 42, 22, 92, 47, 'default', 38),
-('BLOC V', 92, 0, -7, 0, 'Zone noire', 42, 22, 92, 47, 'default', 39),
-('BLOC X', 75, 0, 0, 0, 'Zone noire', 42, 22, 92, 47, 'default', 40),
-('BLOC Z', 46, 0, 0, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 41),
-('BLOC Z0', 46, 0, 0, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 42);
+('BLOC Q', 146, 0, 146, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 34),
+('BLOC R', 146, 0, 146, 0, 'Zone jaune', 42, 22, 92, 47, 'warning', 35),
+('BLOC S', 76, 0, 76, 0, 'Zone noire', 42, 22, 92, 47, 'default', 36),
+('BLOC T', 93, 0, 93, 0, 'Zone noire', 42, 22, 92, 47, 'default', 37),
+('BLOC U', 200, 0, 200, 0, 'Zone noire', 42, 22, 92, 47, 'default', 38),
+('BLOC V', 92, 0, 92, 0, 'Zone noire', 42, 22, 92, 47, 'default', 39),
+('BLOC X', 75, 0, 75, 0, 'Zone noire', 42, 22, 92, 47, 'default', 40),
+('BLOC Z', 46, 0, 46, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 41),
+('BLOC Z0', 46, 0, 46, 0, 'Zone rouge', 42, 22, 92, 47, 'danger', 42);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `hb16_logs`
+--
+
+CREATE TABLE `hb16_logs` (
+`id` int(11) NOT NULL,
+  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `date_log` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -5316,7 +5329,15 @@ CREATE TABLE `hb16_reservations` (
   `envoye_le` date DEFAULT NULL,
   `supprime_le` date DEFAULT NULL,
   `pack_le` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `hb16_reservations`
+--
+
+INSERT INTO `hb16_reservations` (`id`, `user_id`, `owner`, `jour`, `type`, `bloc`, `nbplaces`, `nbplaces_half`, `montant`, `reserve_le`, `paye_le`, `envoye_le`, `supprime_le`, `pack_le`) VALUES
+(1, 10, NULL, '', 'simple', 'BLOC L', 1, 0, 42, '2016-06-30', NULL, NULL, NULL, NULL),
+(2, 10, NULL, '', 'simple', 'BLOC N', 1, 0, 42, '2016-06-30', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -5345,7 +5366,7 @@ CREATE TABLE `hb16_users` (
 
 INSERT INTO `hb16_users` (`id`, `firstname`, `lastname`, `address`, `code`, `localite`, `country`, `telephone`, `email`, `password`, `reset_token`, `reset_at`) VALUES
 (9, 'Albert', 'DEMO', 'rue Solvay, 83', '4100', 'Boncelles', 'Belgium', '04123456', 'demo@countrytickets.eu', '$2y$10$6R.0Cb9ZEplOmfP690L5H.o37aRF6GQ5LJfgp0qZQxfrePXsT7VGG', NULL, NULL),
-(10, 'Christian', 'ZIRBES', 'rue de l''Ã©glise, 100', '4100', 'Boncelles', 'Belgium', '043364769', 'zirby.zirby@gmail.com', '$2y$10$R1WWFyeGIwst8hoYhWMw1eoCuqgvc.RJ6pUQGMMDLdAGyNrZkAbXi', NULL, NULL),
+(10, 'Christian', 'ZIRBES', 'rue de l''Ã©glise, 80', '4100', 'Boncelles', 'Belgium', '043364769', 'zirby.zirby@gmail.com', '$2y$10$R1WWFyeGIwst8hoYhWMw1eoCuqgvc.RJ6pUQGMMDLdAGyNrZkAbXi', 'RDtJhmZqrNundYt6crdjagSpw2WbGOZDi46QVyOdTkGrQDyg92hPGHNB1XMX', '2016-06-30 17:59:27'),
 (11, 'Armando', 'FRARE', 'rue des CÃ©pÃ©es, 41', '4100', 'BONCELLES', 'Belgium', '0475/39 64 15', 'armand.frare@teledisnet.be', '$2y$10$15OE2YBEjZtSpBTUhm3o3.JBk.PyLriq7CrB3r/PIU1GtAa/Vc8Ce', NULL, NULL),
 (12, 'Maggy', 'DELCOUR', 'rue des CÃ©pÃ©es, 41', '4100', 'BONCELLES', 'Belgium', '0475/39.64.15', 'maggy_delcour@hotmail.com', '$2y$10$FHKQ4r22AeoLg2AHjWS04uVYz8twLWi3VZI2JOuvFbmLGCf3vaxVu', NULL, NULL),
 (13, 'Pierre', 'COCONUT', 'rue zazou,13', '4100', 'BONCELLES', 'Belgium', '04 336 13 10', 'afr29731@teledisnet.be', '$2y$10$zlwioj5MHjge/P5Qp8WQ/.bhSr7ha4rmftpNHeAvWtQFjtRubPU9G', NULL, NULL),
@@ -5938,6 +5959,12 @@ ALTER TABLE `hb16_blocs`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `hb16_logs`
+--
+ALTER TABLE `hb16_logs`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `hb16_places`
 --
 ALTER TABLE `hb16_places`
@@ -5965,10 +5992,15 @@ ALTER TABLE `hb16_users`
 ALTER TABLE `hb16_blocs`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=43;
 --
+-- AUTO_INCREMENT pour la table `hb16_logs`
+--
+ALTER TABLE `hb16_logs`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `hb16_reservations`
 --
 ALTER TABLE `hb16_reservations`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `hb16_users`
 --

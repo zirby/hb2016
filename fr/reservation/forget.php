@@ -3,13 +3,13 @@
 session_start();
 if(!empty($_POST) && !empty($_POST['email']) ){
     $errors = array();
-    require 'inc/conn.php';
-    $req = $pdo->prepare("SELECT * FROM cd16_users WHERE email = ?");
+    require '../../inc/conn.php';
+    $req = $pdo->prepare("SELECT * FROM hb16_users WHERE email = ?");
     $req->execute([$_POST['email']]);
     $user = $req->fetch();
     if($user){
         $reset_token = str_random(60);
-        $req = $pdo->prepare("UPDATE cd16_users SET reset_token = ? , reset_at = NOW() WHERE id = ?");
+        $req = $pdo->prepare("UPDATE hb16_users SET reset_token = ? , reset_at = NOW() WHERE id = ?");
         $req->execute([$reset_token, $user->id]);
         // envoie du mail
         $destinataire = $_POST['email'];
@@ -26,8 +26,8 @@ if(!empty($_POST) && !empty($_POST['email']) ){
             header('Location: login.php');
             exit();
         }else{
-            $req = $pdo->prepare("INSERT INTO cd16_logs SET description = ?,res_id = ?,date_log = NOW()");
-            $req->execute(["Mail reset mot de passe pas envoyé", $reservation->id ]);
+            $req = $pdo->prepare("INSERT INTO hb16_logs SET description = ?,user_id = ?,date_log = NOW()");
+            $req->execute(["Mail reset mot de passe pas envoyé", $user->id ]);
             header('Location: login.php');
             exit();
         }

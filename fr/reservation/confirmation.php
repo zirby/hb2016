@@ -1,5 +1,5 @@
 <?php 
-require '../../inc/function.php';
+require 'inc/function.php';
 auth_needed();
 
 $j = substr($_SESSION['jour'], 3);
