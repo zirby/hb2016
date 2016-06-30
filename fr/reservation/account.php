@@ -3,7 +3,7 @@ require 'inc/function.php';
 session_start();
 require '../../inc/conn.php';
 
-$j = substr($_SESSION['jour'], 3);
+//$j = substr($_SESSION['jour'], 3);
 $index = "index.php";
 
 if(!empty($_POST)){

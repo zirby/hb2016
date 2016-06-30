@@ -3,7 +3,7 @@ session_start();
 
 require_once '../../inc/conn.php';
 
-$j = substr($_SESSION['jour'], 3);
+//$j = substr($_SESSION['jour'], 3);
 $index = "index.php";
 if(isset($_SESSION['auth'])){
     $user = $_SESSION['auth'];

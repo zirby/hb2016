@@ -5,7 +5,7 @@ require_once '../../inc/conn.php';
     
     $req = $pdo->prepare("SELECT * FROM hb16_reservations WHERE user_id = ? AND supprime_le IS NULL");
     $req->execute([$_SESSION['auth']->id]);
-    $j = substr($_SESSION['jour'], 3);
+    //$j = substr($_SESSION['jour'], 3);
     $index = "index.php";
 
 ?>

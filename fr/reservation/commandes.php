@@ -3,7 +3,7 @@ require 'inc/function.php';
 auth_needed();
 require_once '../../inc/conn.php';
 
-$j = substr($_SESSION['jour'], 3);
+//$j = substr($_SESSION['jour'], 3);
 $index = "index.php";
 
 
@@ -41,7 +41,7 @@ if(isset($_SESSION['resId'])){
                 <p>Le montant de votre réservation devra être versé sur le compte:<br />
                 <b>a.s.b.l. AFT - Bruxelles</b><br />
                 <b>IBAN: BE84 0017 4289 2259 - BIC: GEBA BE BB</b><br />
-                avec en référence: <b><?= $_SESSION['jour']; ?> -  <?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
+                avec en référence: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
                 <p>VEUILLEZ IMPRIMER CE DOCUMENT SVP<br />OU NOTER LE NUMERO DE RESERVATION</p>
                 <p>MERCI DE VOTRE COMMANDE</p>
                 <p class=" small text-primary"><b>Les places vous seront envoyées endéans les trois jours après votre paiement.</b></p>

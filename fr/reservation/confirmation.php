@@ -2,7 +2,7 @@
 require 'inc/function.php';
 auth_needed();
 
-$j = substr($_SESSION['jour'], 3);
+//$j = substr($_SESSION['jour'], 3);
 $index = "index.php";
 //var_dump($_SESSION['auth']);
 //die();
@@ -38,7 +38,7 @@ $index = "index.php";
             <div class="panel-heading">Commande : </div>
             <div class="panel-body">
                 <table class="table">
-                    <tr><th><?= $_SESSION['jour']; ?></th><th><?= $_SESSION['placeBloc']; ?></th></tr>
+                    <tr><th></th><th><?= $_SESSION['placeBloc']; ?></th></tr>
                     <tr><th><?= $_SESSION['placeFullNb']; ?></th><td>place(s) adulte</td></tr>
                     <tr><th><?= $_SESSION['placeHalfNb']; ?></th><td>place(s) enfant</td></tr>
                </table>

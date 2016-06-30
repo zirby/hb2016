@@ -2,7 +2,7 @@
 <?php 
 session_start();
 
-$j = substr($_SESSION['jour'], 3);
+//$j = substr($_SESSION['jour'], 3);
 $index = "index".$j.".php";
 if(isset($_GET['id']) && isset($_GET['token'])){
     require 'inc/conn.php';

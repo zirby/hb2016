@@ -1,7 +1,7 @@
 <?php
 require 'inc/function.php';
 session_start();
-$j = substr($_SESSION['jour'], 3);
+//$j = substr($_SESSION['jour'], 3);
 $index = "index".$j.".php";
 
 if(!empty($_POST)){
