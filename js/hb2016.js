@@ -189,19 +189,18 @@ $("#bloc_s").click(function () {selectBloc("bloc_s");});
         if (abn) {
             typeRes = "abonnement";
         } else {
-            typeRes = "un jour";
+            typeRes = "simple";
         }
 
         $.ajax({
-            "url": "inc/doCommande.php",
+            "url": "../../inc/doCommande.php",
             "type": "POST",
             "dataType": "json",
             "data": {
                 "priceTot": priceTot,
                 "placeFullNb": placeFullNb,
                 "placeHalfNb": placeHalfNb,
-                "placeAbnFullNb": placeAbnFullNb,
-                "placeAbnHalfNb": placeAbnHalfNb,
+
                 "placeBloc": placeBloc,
                 "placeType": typeRes
             },
