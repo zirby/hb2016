@@ -2,7 +2,7 @@
 require 'inc/function.php';
 session_start();
 //$j = substr($_SESSION['jour'], 3);
-$index = "index".$j.".php";
+$index = "index.php";
 
 if(!empty($_POST)){
     
