@@ -24,10 +24,11 @@ function selectBloc(bloc) {
             console.log(data);
             $("#helpZone").text("");
             placeDispo = data.nb_org;
+            placeBloc = data.bloc;
             if (placeDispo <= 0) {
                 $("#pZone").html(data.zone);
                 $("#pBloc").html("<button class='btn btn-" + data.color + "' type='button'>" + data.bloc + " <span class='badge'>complet</span></button>");
-
+                
                 $('#btnReservOrg').hide();
             } else {
                 $("#pZone").html(data.zone);
@@ -109,12 +110,13 @@ $("#bloc_a").click(function () {selectBloc("bloc_a");});
                 "inputPlaces": $('#inputPlaces').val(),
                 "inputPlacesHalf":$('#inputPlacesHalf').val(),
                 "inputBeneficiaire":$('#inputBeneficiaire').val(),
+                "inputOrganisateur":$('#inputOrganisateur').val(),
                 "inputMontant": $('#inputMontant').val(),
                 "inputType": $('#inputType').val(),
                  "bloc": placeBloc,
             },
             "success": function (data) {
-                console.log(data);
+                console.log(data.msg);
                 document.location.href = "index.php";
             }
         });

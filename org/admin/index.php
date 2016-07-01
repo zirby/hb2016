@@ -95,13 +95,15 @@ if(isset($_POST['btnSearchNom'])){
 </div>
 <div class="col-md-6">
     <div class="row">
-        <div class="alert alert-success" role="alert">
-            <p><strong>Places disponibles</strong></p>
-            <p id="pBloc"></p>
-
-        </div>
+        <div class="col-md-12"><p style="font-size: 1em;"><hr /></b></p></div>
     </div>
-
+    <div class="row">
+        <div class="col-md-7 text-left"  ><p style="font-size: 1em;"><b> PLACES DISPONIBLES ORGANISATEUR:</b></p></div>
+        <div class="col-md-5" id="pBloc"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><p style="font-size: 1em;"><hr /></b></p></div>
+    </div>
     <div class="row">
         <div class="col-md-12"><p style="font-size: 1em;"><b> INDIQUEZ LE NOMBRE DE PLACES</b></p></div>
         <div class="col-md-6 ">
@@ -134,13 +136,21 @@ if(isset($_POST['btnSearchNom'])){
         <div class="col-md-6">
             <div class="input-group">
                 <span class="input-group-addon">Type: </span>
-                <input id="inputType" type="text" class="form-control" value="0">
+
+                <!--<input id="inputType" type="text" class="form-control" value="0">-->
+                <select id="inputType" class="form-control">
+                    <option>VIP</option>
+                    <option>VIP Lounge</option>
+                    <option>Guest</option>
+                </select>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-md-12"><p style="font-size: 1em;"><hr /></b></p></div>
+        </div>
+        <input type="hidden" name="inputOrganisateur" id="inputOrganisateur" value="<?= $org; ?>">
         <p id="salleHelp" style="font-size: 1em;"></p>
-        <div class="col-md-12" style="height: 20px;"></div>
-        <button id="btnReservOrg" type="button" class="btn btn-primary btn-lg">Réserver</button>
+         <button id="btnReservOrg" type="button" class="btn btn-primary btn-lg">Réserver</button>
     </div>
 
 </div>
@@ -178,6 +188,7 @@ if(isset($_POST['btnSearchNom'])){
         <thead>
             <th>N°</th>
             <th>Bénéficiaire</th>
+            <th>Type</th>
             <th>Bloc</th>
             <th>Pl.Adulte</th>
             <th>Pl.Enfant</th>
@@ -190,6 +201,7 @@ if(isset($_POST['btnSearchNom'])){
             <tr>
                 <td style="text-align: left;"><?= $res->rid; ?></td>
                 <td style="text-align: left;color:red;"><?= strtoupper($res->firstname); ?></td>
+                <td style="text-align: left;"><?= $res->type; ?></td>
                 <td style="text-align: left;"><?= $res->bloc; ?></td>
                 <td style="text-align: left;"><?= $res->nbplaces; ?></td>
                 <td style="text-align: left;"><?= $res->nbplaces_half; ?></td>
