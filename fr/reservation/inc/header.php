@@ -11,7 +11,7 @@
     <meta name="author" content="">
 
     <title>CountryTickets.eu</title>
-    <link rel="icon" type="image/png" href="img/Capella_16.png" />
+    <link rel="icon" type="image/png" href="../../img/Capella_16.png" />
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
 

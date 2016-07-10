@@ -1,3 +1,6 @@
+<?php
+header('Location: reservation/index.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>CD2016-AFT</title>
+    <title>Countrytickets.eu</title>
+    <link rel="icon" type="image/png" href="../../img/Capella_16.png" />
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
