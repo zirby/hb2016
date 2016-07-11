@@ -1,5 +1,5 @@
 <?php
-header('Location: reservation/index.php');
+header('Location: admin/index.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ header('Location: reservation/index.php');
 <body>
 
     <h1>Hand_2016</h1>
-    <p>Page francophone.</p>
+    <p>Page organisateur.</p>
 
 </body>
 </html>
