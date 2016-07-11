@@ -22,8 +22,7 @@ $(document).ready(function(){
       var max_org = button.data('max_org'); 
       var price = button.data('price'); 
       var price_half = button.data('price_half'); 
-      var price_abn = button.data('price_abn'); 
-      var price_abn_half = button.data('price_abn_half'); 
+
       // je rempli les champs avec les valeurs
       var modal = $(this);
       modal.find('.modal-body input[name="inputBloc"]').val(name);
@@ -31,8 +30,7 @@ $(document).ready(function(){
       modal.find('.modal-body input[name="inputMaxOrg"]').val(max_org);
       modal.find('.modal-body input[name="inputPrice"]').val(price);
       modal.find('.modal-body input[name="inputPriceHalf"]').val(price_half);
-      modal.find('.modal-body input[name="inputPriceAbn"]').val(price_abn);
-      modal.find('.modal-body input[name="inputPriceAbnHalf"]').val(price_abn_half);
+
     });
     
     $('#exampleModal').on('show.bs.modal', function (event) {
@@ -44,6 +42,7 @@ $(document).ready(function(){
       //modal.find('.modal-title').text('Commande ' + recipient)
       modal.find('.modal-body input').val(recipient);
     });
+
     $('#envoyeModal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget); // Button that triggered the modal
       var recipient = button.data('id'); // Extract info from data-* attributes
@@ -53,15 +52,16 @@ $(document).ready(function(){
       //modal.find('.modal-title').text('Commande ' + recipient)
       modal.find('.modal-body input').val(recipient);
     });
+
     $('#placesModal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget); // Button that triggered the modal
       var recipient = button.data('id'); 
-      var jour = button.data('jour');
+      
       var nbplaces = button.data('nbplaces');
       var modal = $(this);
       //modal.find('.modal-title').text('Commande ' + recipient)
       modal.find('.modal-body input').val(recipient);
-      modal.find('.modal-body input[name="jour"]').val(jour);
+      
       modal.find('.modal-body input[name="nbplaces"]').val(nbplaces);
       $.ajax({
             url: "inc/doPlaces.php",
@@ -92,6 +92,7 @@ $(document).ready(function(){
                  }
             });
     });
+    
     $('#btnPayeLeReset').click( function () {
             var reserv = $('#Nreserve').val();
             $.ajax({
@@ -103,6 +104,7 @@ $(document).ready(function(){
             });
         
     });
+    
     $('#btnDoPlaces').click( function () {
             //var reserv = $('#Nreserve').val();
             $.ajax({
@@ -112,22 +114,8 @@ $(document).ready(function(){
                         location.href="index.php";
                  }
             });
-        
     });
-    /*
-    $('#btnDoBlocsVen').click( function () {
-            //var reserv = $('#Nreserve').val();
-            $.ajax({
-                url:'doBlocsVen.php',
-                method: "POST",
-                success: function(data) {
-                        $('#blocVenModal').modal('toggle')
-                        location.href="blocs_ven.php";
-                 }
-            });
-        
-    });
-    */
+
     
     $('#dtEnvoye').datepicker()
         .on('changeDate', function(e) {
@@ -141,6 +129,7 @@ $(document).ready(function(){
                  }
             });
     });
+
     $('#btnEnvoyeLeReset').click( function () {
             var reserv = $('#NEreserve').val();
             $.ajax({
@@ -152,6 +141,7 @@ $(document).ready(function(){
             });
         
     });
+
     $('#btnSuppAuto').click( function () {
             $.ajax({
                 url:'inc/doSupprimer.php',
@@ -165,9 +155,9 @@ $(document).ready(function(){
     $('#btnDoDispo').click( function () {
             var jour = $('#jour').val();
             $.ajax({
-                url:'inc/doDispo.php?jour='+jour,
+                url:'inc/doDispo.php',
                 success: function(data) {
-                        location.href="blocs.php?jour="+jour;
+                        location.href="blocs.php";
                  }
             });
         

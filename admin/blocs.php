@@ -30,19 +30,17 @@ $req->execute();
     </div>
   </div><!-- /.container-fluid -->
 </nav>
-<div id="jour" hidden="true"><?= $jour; ?></div>
+
 <div class="col-md-12">
     <table class="table table-striped table-hover ">
         <thead>
             <th>Bloc</th>
             <th>Max</th>
             <th>Max Org.</th>
-            <th style="text-align: right;">Nb places</th>
-            <th style="text-align: right;">Nb places Org.</th>
+            <th style="text-align: right;">Places dispo.</th>
+            <th style="text-align: right;">Places dispo Org.</th>
             <th style="text-align: right;">Prix</th>
             <th style="text-align: right;">Prix Enfant</th>
-            <th style="text-align: right;">Prix Abonnement</th>
-            <th style="text-align: right;">Prix Abn. Enfant</th>
             <th style="text-align: right;">Action</th>
         </thead>
         <tbody>
@@ -55,8 +53,7 @@ $req->execute();
                 <td style="text-align: right;color:red;"><?= $res->places_org; ?></td>
                 <td style="text-align: right;"><?= $res->price; ?> €</td>
                 <td style="text-align: right;"><?= $res->price_half; ?> €</td>
-                <td style="text-align: right;"><?= $res->price_abn; ?> €</td>
-                <td style="text-align: right;"><?= $res->price_abn_half; ?> €</td>
+
                 <td style="text-align: right;">
                     <a href="#" class="btn btn-success btn-xs" title="modifier les blocs" 
                        data-toggle="modal" 
@@ -86,7 +83,7 @@ $req->execute();
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" >Modifier le bloc</h4>
       </div>
-     <form action="inc/doBlocs.php?jour=<?= $jour ?>" method="POST">
+     <form action="inc/doBlocs.php" method="POST">
          <div class="modal-body ">
             <div class="form-group">
                 <label for="inputBloc" class="control-label">Bloc:</label>
@@ -108,17 +105,10 @@ $req->execute();
                 <label for="inputPriceHalf" class="control-label">Prix enfants:</label>
                 <input name="inputPriceHalf" id="NPreserve" type="text" class="form-control" >
             </div>
-            <div class="form-group">
-                <label for="inputPriceAbn" class="control-label">Prix Abonnement:</label>
-                <input name="inputPriceAbn" id="jour" type="text" class="form-control" >
-            </div>
-            <div class="form-group">
-                <label for="inputPriceAbnHalf" class="control-label">Prix Abn. Enfant:</label>
-                <input name="inputPriceAbnHalf" id="jour" type="text" class="form-control" >
-            </div>
+
          </div>
         <div class="modal-footer">
-            <button name="btnDoBlocs" id="btnDoBlocsVen" type="submit" class="btn btn-primary">Enregistrer</button>
+            <button name="btnDoBlocs" id="btnDoBlocs" type="submit" class="btn btn-primary">Enregistrer</button>
         </div>
      </form>
     </div>

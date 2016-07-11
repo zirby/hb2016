@@ -137,10 +137,7 @@ if(isset($_POST['btnSearchNom'])){
                 <label for="NPreserve" class="control-label">Réservation n°:</label>
                 <input name="NPreserve" id="NPreserve" type="text" class="form-control" >
             </div>
-            <div class="form-group">
-                <label for="jour" class="control-label">Jour:</label>
-                <input name="jour" id="jour" type="text" class="form-control" >
-            </div>            
+         
             <div class="form-group">
                 <label for="nbplaces" class="control-label">Nb de Places:</label>
                 <input name="nbplaces" id="nbplaces" type="text" class="form-control" >
