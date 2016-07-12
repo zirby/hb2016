@@ -103,8 +103,8 @@ while($res = $req->fetch()){
     <div class="row">
         <div class="col-md-12" style="height:30px;"></div>
     </div>
-    <div class="row sp_50">
-        <div class="col-md-4 text-left"><b>Places à</b></div>
+    <div class="row sp_50" style="margin-bottom:30px;">
+        <div class="col-md-4 text-center"><b>Places à</b></div>
         <div class="col-md-4" id="pPriceAd"></div>
         <div class="col-md-4"><input id="inputPlaces" type="text" class="form-control" value="0"></div>
     </div>
