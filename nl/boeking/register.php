@@ -61,11 +61,11 @@ if(!empty($_POST)){
                 <a href="<?= $index ?>" class="btn btn-primary btn-lg" title="<retour"  role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
             </div>
             <div class="col-md-4">
-                <p style="text-align: center"><h1>S'inscrire</h1></p>
+                <p style="text-align: center"><h1>Inschrijven</h1></p>
             </div>
         </div>
     </legend>
-    <p class="text-primary">Retenez votre e-mail et votre mot de passe, ils vous seront demandés en cas de connexion ultérieure</p>
+    <p class="text-primary">Onthoud uw e-mail en uw wachtwoord. Zij zullen in geval van een bijkomende aanmelding worden gevraagd</p>
      <?php if(!empty($errors)):?>
         <div class="alert alert-danger">
             <ul>
@@ -77,44 +77,44 @@ if(!empty($_POST)){
     <?php endif; ?>
     <div class="col-lg-6">
       <div class="form-group">
-        <label for="lastname" class="col-lg-3 control-label">Nom<sup style="color:red;">*</sup></label>
+        <label for="lastname" class="col-lg-3 control-label">Naam<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
-          <input type="text" class="form-control" style="text-transform: uppercase" name="lastname" id="lastname" placeholder="Nom">
+          <input type="text" class="form-control" style="text-transform: uppercase" name="lastname" id="lastname" placeholder="Naam">
         </div>
       </div>
       <div class="form-group">
-        <label for="firstname" class="col-lg-3 control-label">Prénom<sup style="color:red;">*</sup></label>
+        <label for="firstname" class="col-lg-3 control-label">Voornaam<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
-          <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Prénom">
+          <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Voornaam">
           <span id="helpFirstName"></span>
         </div>
       </div>
 
     <div class="form-group">
-        <label for="inputAdr" class="col-lg-3 control-label">Adresse<sup style="color:red;">*</sup></label>
+        <label for="inputAdr" class="col-lg-3 control-label">Adres<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
-          <input type="text" class="form-control" name="inputAdr" id="inputAdr" placeholder="Rue - N° - Boite">
+          <input type="text" class="form-control" name="inputAdr" id="inputAdr" placeholder="Adres">
           <span id="helpAdr"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputZip" class="col-lg-3 control-label">Code<sup style="color:red;">*</sup></label>
+        <label for="inputZip" class="col-lg-3 control-label">Postcode<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
-          <input type="text" class="form-control" name="inputZip" id="inputZip" placeholder="Code Postal">
+          <input type="text" class="form-control" name="inputZip" id="inputZip" placeholder="Postcode">
           <span id="helpZip"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputLocal" class="col-lg-3 control-label">Localité<sup style="color:red;">*</sup></label>
+        <label for="inputLocal" class="col-lg-3 control-label">Gemeente<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
-          <input type="text" class="form-control" name="inputLocal" id="inputLocal" placeholder="Localité">
+          <input type="text" class="form-control" name="inputLocal" id="inputLocal" placeholder="Gemeente">
           <span id="helpLocal"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPays" class="col-lg-3 control-label">Pays<sup style="color:red;">*</sup></label>
+        <label for="inputPays" class="col-lg-3 control-label">Land<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
-          <input type="text" class="form-control" name="inputPays" id="inputPays" placeholder="Pays">
+          <input type="text" class="form-control" name="inputPays" id="inputPays" placeholder="Land">
           <span id="helpPays"></span>
         </div>
       </div>
@@ -128,7 +128,7 @@ if(!empty($_POST)){
         </div>
       </div>
       <div class="form-group">
-        <label for="inputEmailConfirm" class="col-lg-3 control-label">Confirmer E-Mail<sup style="color:red;">*</sup></label>
+        <label for="inputEmailConfirm" class="col-lg-3 control-label">Bevestiging e-mail<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="email" class="form-control" name="inputEmailConfirm" id="inputEmailConfirm" placeholder="E-Mail">
           <span id="helpEmailConfirm"></span>
@@ -136,22 +136,22 @@ if(!empty($_POST)){
       </div>
 
       <div class="form-group">
-        <label for="inputPhone" class="col-lg-3 control-label">Téléphone<sup style="color:red;">*</sup></label>
+        <label for="inputPhone" class="col-lg-3 control-label">Telefoonnumber<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
-          <input type="text" class="form-control" name="inputPhone" id="inputPhone" placeholder="Téléphone">
+          <input type="text" class="form-control" name="inputPhone" id="inputPhone" placeholder="Telefoonnumber">
           <span id="helpPhone"></span>
         </div>
       </div>
     <div class="form-group">
-      <label for="password" class="col-lg-3 control-label">Mot de passe<sup style="color:red;">*</sup></label>
+      <label for="password" class="col-lg-3 control-label">Wachtwoord<sup style="color:red;">*</sup></label>
       <div class="col-lg-9">
-        <input class="form-control" name="password" id="password" placeholder="Password" type="password">
+        <input class="form-control" name="password" id="password"  type="password" placeholder="Wachtwoord">
       </div>
     </div>
     <div class="form-group">
-      <label for="passwordconfirm" class="col-lg-3 control-label">Confirmer Mot de passe<sup style="color:red;">*</sup></label>
+      <label for="passwordconfirm" class="col-lg-3 control-label">Bevsetig wachtwoord<sup style="color:red;">*</sup></label>
       <div class="col-lg-9">
-        <input class="form-control" name="passwordconfirm" id="passwordconfirm" placeholder="Password" type="password">
+        <input class="form-control" name="passwordconfirm" id="passwordconfirm"  type="password" placeholder="Wachtwoord">
       </div>
     </div>
     <div class="form-group">

@@ -58,10 +58,10 @@
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
                     <?php if(isset($_SESSION['auth'])):?>
                     <li><a class="page-scroll" href="reservations.php">Mijn reserveringen</a></li>
-                    <li><a class="page-scroll" href="logout.php">Se déconnecter</a></li>
+                    <li><a class="page-scroll" href="logout.php">Afmelden</a></li>
                     <?php else: ?>
                     <li><a class="page-scroll" href="register.php">Inschrijven</a></li>
-                    <li><a class="page-scroll" href="login.php">Afmelden</a></li>
+                    <li><a class="page-scroll" href="login.php">Melden</a></li>
                     <?php endif; ?>
                 </ul>
             </div>

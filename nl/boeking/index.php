@@ -86,10 +86,10 @@ while($res = $req->fetch()){
 <div class="col-md-4 text-center">
 
     <div class="row">
-        <div class="col-md-12 sp_30"><em>1. CLIQUEZ SUR UN BLOC</em></div>
+        <div class="col-md-12 sp_30"><em>1. KLIK OP EEN BLOK</em></div>
     </div>
     <div class="row">
-        <div class="col-md-12 sp_30"  data-toggle="tooltip" data-placement="top" title="le nombre de places peu changer en + ou en -"><h5>Places disponibles*</h5><span>places à visibilté réduite</span></div>
+        <div class="col-md-12 sp_30"  data-toggle="tooltip" data-placement="top" title="le nombre de places peu changer en + ou en -"><h5>Beschikbare plaatsen*</h5><span></span></div>
     </div>
     <div class="row">    
         <div class="col-md-12" id="pBloc"></div>
@@ -98,13 +98,13 @@ while($res = $req->fetch()){
         <div class="col-md-12" style="height:50px;"></div>
     </div>
     <div class="row">
-        <div class="col-md-12 sp_30"><em>2. INDIQUEZ LE NOMBRE DE PLACES SOUHAITEES </em></div>
+        <div class="col-md-12 sp_30"><em>2. GEEF HET AANTAL PLAATSEN AAN RESERVEREN </em></div>
     </div>
     <div class="row">
         <div class="col-md-12" style="height:30px;"></div>
     </div>
     <div class="row sp_50" style="margin-bottom:30px;">
-        <div class="col-md-4 text-center"><b>Places à</b></div>
+        <div class="col-md-4 text-center"><b>Plaatsen af</b></div>
         <div class="col-md-4" id="pPriceAd"></div>
         <div class="col-md-4"><input id="inputPlaces" type="text" class="form-control" value="0"></div>
     </div>
@@ -117,7 +117,7 @@ while($res = $req->fetch()){
     <div class="row sp_50">
         <div class="col-md-12">
             <div class="input-group">
-                <span class="input-group-addon" style="padding-left: 35px">Total:</span>
+                <span class="input-group-addon" style="padding-left: 35px">Totaal:</span>
                 <input id="inputTotal" type="text" class="form-control" value="0" readonly="true">
                 <span class="input-group-addon">.00 €</span>
             </div>
@@ -128,7 +128,7 @@ while($res = $req->fetch()){
         <div class="col-md-12" id="salleHelp"></div>
     </div>
     <div class="row">
-        <div class="col-md-12"><button id="btnReserver" type="button" class="btn btn-primary btn-lg">Réserver</button></div>
+        <div class="col-md-12"><button id="btnReserver" type="button" class="btn btn-primary btn-lg">RESERVEREN</button></div>
         
     </div>
 

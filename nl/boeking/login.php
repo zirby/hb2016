@@ -29,7 +29,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
         }
         exit();
     }else{
-        $_SESSION['flash']['danger']="Email ou mot de passe incorrect";
+        $_SESSION['flash']['danger']="Email of wachtwoord niet correct";
         //header('Location: login .php');
     }
 }
@@ -74,7 +74,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
       </div>
     </div>
     <div class="form-group">
-        <label for="password" class="col-lg-4 control-label">Mot de passe</label>
+        <label for="password" class="col-lg-4 control-label">Watchwoord</label>
       <div class="col-lg-8">
           <input class="form-control" name="password" id="password" placeholder="Mot de passe" type="password" value="<?= $psswd; ?>">
         <span class="help-block"><a href="forget.php">(j'ai oublié mon mot de passe)</a></span>
