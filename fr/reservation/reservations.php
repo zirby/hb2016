@@ -23,7 +23,6 @@ require_once '../../inc/conn.php';
     <table class="table">
         <thead>
             <th>N° reservation</th>
-            <th>Jour</th>
             <th>Type</th>
             <th>Bloc</th>
             <th>Pl.Adulte</th>
@@ -37,7 +36,6 @@ require_once '../../inc/conn.php';
             <?php while($res = $req->fetch()): ?>
             <tr>
                 <td style="text-align: left;"><?= $res->id; ?></td>
-                <td style="text-align: left;"><?= $res->jour; ?></td>
                 <td style="text-align: left;"><?= $res->type; ?></td>
                 <td style="text-align: left;"><?= $res->bloc; ?></td>
                 <td style="text-align: left;"><?= $res->nbplaces; ?></td>
@@ -51,6 +49,10 @@ require_once '../../inc/conn.php';
         </tbody>
     </table>
 </div>
-<p class=" small text-primary"><b>A partir du 28/02, le montant des commandes est à payer au guichet le jour de la rencontre.</b></p>
+<p class=" small text-primary">Le montant de votre commande devra être versé sur le compte:<br />
+                <b>CAPella - Ch. ZIRBES</b><br />
+                <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
+                avec en référence: <b>N° réservation - <?= $_SESSION['auth']->lastname; ?></b></p>
+<!-- <p class=" small text-primary"><b>A partir du 28/02, le montant des commandes est à payer au guichet le jour de la rencontre.</b></p> -->
 
 <?php require 'inc/footer.php'; ?>
