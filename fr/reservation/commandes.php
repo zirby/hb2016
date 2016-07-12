@@ -61,8 +61,7 @@ if(isset($_SESSION['resId'])){
                 <table class="table">
                     <tr><th>N°</th><th><?= $reservationId; ?></th></tr>
                     <tr><th>Bloc</th><th><?= $_SESSION['placeBloc']; ?></th></tr>
-                    <tr><th><?= $_SESSION['placeFullNb']; ?></th><td>place(s) adulte</td></tr>
-                    <tr><th><?= $_SESSION['placeHalfNb']; ?></th><td>place(s) enfant</td></tr>
+                    <tr><th><?= $_SESSION['placeFullNb']; ?></th><td>place(s)</td></tr>
                </table>
             </div>
             <div class="panel-footer text-right">

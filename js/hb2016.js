@@ -67,31 +67,32 @@ function selectBloc(bloc) {
     });
 }
 
-function doSum(nbPlace, pricePlace, nbPlaceHalf, pricePlaceHalf) {
+function doSum(nbPlace, pricePlace) {
     if (nbPlace.length === 0)  nbPlace = 0;
-    if (nbPlaceHalf.length === 0)  nbPlaceHalf = 0;
+    
 
     
     full = parseInt(nbPlace) * parseInt(pricePlace);
-    half = parseInt(nbPlaceHalf) * parseInt(pricePlaceHalf);
+    
 
-    return full + half ;
+    return full  ;
 }
-function printSum(priceUnit, priceUnitHalf){
+function printSum(priceUnit){
         placeFullNb = ($("#inputPlaces").val()==="") ? 0 : $("#inputPlaces").val();
-        placeHalfNb = ($("#inputPlacesHalf").val()==="") ? 0 : $("#inputPlacesHalf").val();
 
-        placeNb = parseInt(placeFullNb) + parseInt(placeHalfNb);
+        placeNb = parseInt(placeFullNb)
         
-        console.log(placeNb);
+        console.log("nbplaces  " + placeNb);
+        console.log("dispo  " + placeDispo);
         if(placeNb > 0){
             if(placeNb > placeDispo){
+                
                 $('#salleHelp').html("<div class='alert alert-danger' role='alert'>Trop de places<br /><em>(Too much tickets)</em></div>");
                 $('#btnReserver').hide();                
             }else{
                 $('#salleHelp').html("");
                 $('#btnReserver').show();
-                priceTot = doSum(placeFullNb, priceUnit, placeHalfNb, priceUnitHalf);
+                priceTot = doSum(placeFullNb, priceUnit);
                 $("#inputTotal").val(priceTot);            
             }
         }else{
@@ -180,10 +181,10 @@ $("#bloc_t").click(function () {selectBloc("bloc_t");});
 $("#bloc_s").click(function () {selectBloc("bloc_s");});
 /**************************************************/
 
-    $('#inputPlaces').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });  
-    $('#inputPlacesHalf').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });
-    $('#inputPlacesAbn').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });  
-    $('#inputPlacesAbnHalf').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });
+    $('#inputPlaces').keyup(function () { printSum(priceUnit); });  
+    //$('#inputPlacesHalf').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });
+    //$('#inputPlacesAbn').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });  
+    //$('#inputPlacesAbnHalf').keyup(function () { printSum(priceUnit, priceUnitHalf, priceAbn, priceAbnHalf); });
     
     $('#btnReserver').click(function () {
         if (abn) {

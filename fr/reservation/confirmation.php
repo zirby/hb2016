@@ -38,9 +38,7 @@ $index = "index.php";
             <div class="panel-heading">Commande : </div>
             <div class="panel-body">
                 <table class="table">
-                    <tr><th></th><th><?= $_SESSION['placeBloc']; ?></th></tr>
-                    <tr><th><?= $_SESSION['placeFullNb']; ?></th><td>place(s) adulte</td></tr>
-                    <tr><th><?= $_SESSION['placeHalfNb']; ?></th><td>place(s) enfant</td></tr>
+                    <tr><th><?= $_SESSION['placeBloc']; ?></th><th><?= $_SESSION['placeFullNb']; ?> place(s)</th></tr>
                </table>
             </div>
             <div class="panel-footer text-right">

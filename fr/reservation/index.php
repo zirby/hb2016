@@ -123,9 +123,7 @@ while($res = $req->fetch()){
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 text-left sp_50"></div>
-    </div>
+
     <div class="row">
         <div class="col-md-12" id="salleHelp"></div>
     </div>
