@@ -37,7 +37,7 @@ while($res = $req->fetch()){
 <?php require 'inc/header.php'; ?>
 <h2>Réservation - <span style="color: red">HandBall</span></h2>
 
-<div class="col-md-7">
+<div class="col-md-8">
 <img src="../../img/hb2016_600_z.jpg" alt="la salle" class="img-rounded displayed" usemap="#map-hb2016_600"/>
 <map name="map-hb2016_600" id="map-hb2016_600">
 <area id="bloc_a" alt="" title="" href="#" shape="rect" coords="155,266,209,345" />
@@ -83,36 +83,41 @@ while($res = $req->fetch()){
 </map>
      
 </div>
-<div class="col-md-5">
+<div class="col-md-4 text-center">
 
     <div class="row">
-        <div class="col-md-12 text-left sp_30"><em>1. CLIQUEZ SUR UN BLOC</em></div>
+        <div class="col-md-12 sp_30"><em>1. CLIQUEZ SUR UN BLOC</em></div>
     </div>
     <div class="row">
-        <div class="col-md-7 text-left"  data-toggle="tooltip" data-placement="top" title="le nombre de places peu changer en + ou en -"><h5>Places disponibles*</h5><span>places à visibilté réduite</span></div>
-        <div class="col-md-5" id="pBloc"></div>
+        <div class="col-md-12 sp_30"  data-toggle="tooltip" data-placement="top" title="le nombre de places peu changer en + ou en -"><h5>Places disponibles*</h5><span>places à visibilté réduite</span></div>
+    </div>
+    <div class="row">    
+        <div class="col-md-12" id="pBloc"></div>
     </div>
     <div class="row">
-        <div class="col-md-12 text-left" style="height:50px;"></div>
+        <div class="col-md-12" style="height:50px;"></div>
     </div>
     <div class="row">
-        <div class="col-md-12 text-left sp_30"><em>2. INDIQUEZ LE NOMBRE DE PLACES</em></div>
+        <div class="col-md-12 sp_30"><em>2. INDIQUEZ LE NOMBRE DE PLACES SOUHAITEES </em></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="height:30px;"></div>
     </div>
     <div class="row sp_50">
-        <div class="col-md-6 text-left"><h5>Adultes</h5></div>
+        <div class="col-md-4 text-left"><b>Places à</b></div>
         <div class="col-md-4" id="pPriceAd"></div>
-        <div class="col-md-2"><input id="inputPlaces" type="text" class="form-control" value="0"></div>
+        <div class="col-md-4"><input id="inputPlaces" type="text" class="form-control" value="0"></div>
     </div>
-    <div class="row sp_50">
+    <!-- <div class="row sp_50">
         <div class="col-md-6 text-left"><h5>Enfants</h5></div>
         <div class="col-md-4" id="pPriceEn"></div>
         <div class="col-md-2"><input id="inputPlacesHalf" type="text" class="form-control" value="0"></div>
-    </div>
+    </div> -->
  
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+    <div class="row sp_50">
+        <div class="col-md-12">
             <div class="input-group">
-                <span class="input-group-addon" style="padding-left: 45px">Total:</span>
+                <span class="input-group-addon" style="padding-left: 35px">Total:</span>
                 <input id="inputTotal" type="text" class="form-control" value="0" readonly="true">
                 <span class="input-group-addon">.00 €</span>
             </div>
