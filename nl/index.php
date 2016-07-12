@@ -1,3 +1,6 @@
+<?php
+header('Location: boeking/index.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +9,8 @@
 </head>
 <body>
 
-    <h1>Page Hand_2016</h1>
-    <p>Première page.</p>
+    <h1>Hand_2016</h1>
+    <p>Netherlands.</p>
 
 </body>
 </html>
