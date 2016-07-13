@@ -19,6 +19,7 @@
     <link href="../../css/grayscale.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/flag-icon.css" rel="stylesheet">
     <link href="../../css/style_print.css" rel="stylesheet" media="print">
 
     <!-- Custom Fonts -->
@@ -62,6 +63,10 @@
                     <?php else: ?>
                     <li><a class="page-scroll" href="register.php">Inschrijven</a></li>
                     <li><a class="page-scroll" href="login.php">Melden</a></li>
+                    <li><a class="page-scroll" href="../../nl/index.php"><span class="flag-icon flag-icon-nl"></span></a></li>
+                    <li><a class="page-scroll" href="../../fr/index.php"><span class="flag-icon flag-icon-fr"></span></a></li>
+                    <li><a class="page-scroll" href="../../de/index.php"><span class="flag-icon flag-icon-de"></span></a></li>
+                    <li><a class="page-scroll" href="../../en/index.php"><span class="flag-icon flag-icon-gb"></span></a></li>
                     <?php endif; ?>
                 </ul>
             </div>
