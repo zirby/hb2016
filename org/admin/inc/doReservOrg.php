@@ -27,7 +27,7 @@ $bloc = $_POST['bloc'];
 
 
 
-$req = $pdo->prepare("INSERT INTO hb16_reservations SET user_id = ?, type = ?, bloc = ?, nbplaces = ?, reserve_le = NOW()");
+$req = $pdo->prepare("INSERT INTO hb16_reservations SET user_id = ?, type = ?, bloc = ?, nbplaces = ?,paye_le = NOW(),  reserve_le = NOW()");
 $req->execute([$user_id,  $type, $bloc, $places]);
 
 echo json_encode(array('msg'=>"success"));
