@@ -15,9 +15,9 @@ $user_id = $pdo->lastInsertId();
 
 
 $places = $_POST['inputPlaces'];
-$placeshalf = $_POST['inputPlacesHalf'];
 
-$montant = $_POST['inputMontant'];
+
+
 
 $type = $_POST['inputType'];
 
@@ -27,7 +27,7 @@ $bloc = $_POST['bloc'];
 
 
 
-$req = $pdo->prepare("INSERT INTO hb16_reservations SET user_id = ?, type = ?, bloc = ?, nbplaces = ?, nbplaces_half = ?,  montant = ?, reserve_le = NOW()");
-$req->execute([$user_id,  $type, $bloc, $places, $placeshalf, $montant]);
+$req = $pdo->prepare("INSERT INTO hb16_reservations SET user_id = ?, type = ?, bloc = ?, nbplaces = ?, reserve_le = NOW()");
+$req->execute([$user_id,  $type, $bloc, $places]);
 
 echo json_encode(array('msg'=>"success"));

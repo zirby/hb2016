@@ -3,7 +3,7 @@
 require_once '../../inc/conn.php';
 
 // faire doDispo ORG avec IDENTIFIANT de ORGANISATEUR
-$org = 'UBH'; // id de l'organisateur
+$org = 'URBH'; // id de l'organisateur
 $req = $pdo->prepare("SELECT * FROM hb16_blocs" );
 $req->execute();
 
@@ -12,17 +12,16 @@ while($res = $req->fetch()){
     //$reqReserv = $pdo->prepare("SELECT SUM(nbplaces) as splaces, SUM(nbplaces_half) as splaces_half FROM cd16_reservations WHERE (bloc=? AND jour =? AND supprime_le IS NULL) OR (bloc=? AND jour='ABN3J' AND supprime_le IS NULL)");
     $reqReserv->execute(array($res->name, $org));
     $resReserv = $reqReserv->fetch();
-    // pour reservation countrytickets
-    $somme = intval($resReserv->splaces) + intval($resReserv->splaces_half);
-    //echo $Ubloc." = ".$res->max_org." & ".$somme."<br />";
-    if($somme == 0){
-        $reqUpdate=$pdo->prepare("UPDATE hb16_blocs SET places_org=max_org WHERE name=?" );
-        $reqUpdate->execute(array($res->name));
-    }else{
+    if($resReserv){
+        $somme = intval($resReserv->splaces) + intval($resReserv->splaces_half);
         $valeur = intval($res->max_org) - intval($somme);
         $reqUpdate=$pdo->prepare("UPDATE hb16_blocs SET places_org=? WHERE name=?" );
         $reqUpdate->execute(array($valeur, $res->name));
+    }else{
+        $reqUpdate=$pdo->prepare("UPDATE hb16_blocs SET places_org=max_org WHERE name=?" );
+        $reqUpdate->execute(array($res->name));
     }
+   
 }
 
 // faire la liste des réservations
@@ -41,7 +40,7 @@ if(isset($_POST['btnSearchNom'])){
 
 <div class="row text-center">
     <div class="col-md-12">
-        <button type="button" class="btn btn-<?= $couleurJour ?>"><h2>Tickets - Organisateurs - <?= $org; ?></h2></button>
+        <button type="button" class="btn btn-default"><h2>Tickets - Organisateurs - <?= $org; ?></h2></button>
     </div>
     <div class="col-md-12" style="height: 20px;"></div>
 </div>
@@ -106,18 +105,13 @@ if(isset($_POST['btnSearchNom'])){
     </div>
     <div class="row">
         <div class="col-md-12"><p style="font-size: 1em;"><b> INDIQUEZ LE NOMBRE DE PLACES</b></p></div>
-        <div class="col-md-6 ">
+        <div class="col-md-12 ">
             <div class="input-group">
-                <span class="input-group-addon">Adulte: </span>
+                <span class="input-group-addon">Place organisateur: </span>
                 <input id="inputPlaces" type="text" class="form-control" value="0">
             </div>
         </div>
-        <div class="col-md-6 ">
-            <div class="input-group">
-                <span class="input-group-addon">Enfant: </span>
-                <input id="inputPlacesHalf" type="text" class="form-control" value="0">
-            </div>
-        </div>
+
         <div class="col-md-12"><p style="font-size: 1em;"><b> PRECISEZ LE BENEFICIAIRE</b></p></div>
         <div class="col-md-12">
             <div class="input-group">
@@ -125,23 +119,16 @@ if(isset($_POST['btnSearchNom'])){
                 <input id="inputBeneficiaire" type="text" class="form-control">
             </div>
         </div>
-        <div class="col-md-6"><p style="font-size: 1em;"><b> MONTANT</b></p></div>
-        <div class="col-md-6"><p style="font-size: 1em;"><b> TYPE DE TICKET</b></p></div>
-        <div class="col-md-6">
-            <div class="input-group">
-                <span class="input-group-addon">Montant: </span>
-                <input id="inputMontant" type="text" class="form-control" value="0">
-            </div>
-        </div>
-        <div class="col-md-6">
+        <div class="col-md-12"><p style="font-size: 1em;"><b> TYPE DE TICKET</b></p></div>
+
+        <div class="col-md-12">
             <div class="input-group">
                 <span class="input-group-addon">Type: </span>
 
                 <!--<input id="inputType" type="text" class="form-control" value="0">-->
                 <select id="inputType" class="form-control">
                     <option>VIP</option>
-                    <option>VIP Lounge</option>
-                    <option>Guest</option>
+                     <option>Guest</option>
                 </select>
             </div>
         </div>
@@ -190,8 +177,7 @@ if(isset($_POST['btnSearchNom'])){
             <th>Bénéficiaire</th>
             <th>Type</th>
             <th>Bloc</th>
-            <th>Pl.Adulte</th>
-            <th>Pl.Enfant</th>
+            <th>Nb. places</th>
             <th style="text-align: right;">Réservé le</th>
             <th style="text-align: right;">Action</th>
         </thead>
@@ -204,7 +190,6 @@ if(isset($_POST['btnSearchNom'])){
                 <td style="text-align: left;"><?= $res->type; ?></td>
                 <td style="text-align: left;"><?= $res->bloc; ?></td>
                 <td style="text-align: left;"><?= $res->nbplaces; ?></td>
-                <td style="text-align: left;"><?= $res->nbplaces_half; ?></td>
                 <td style="text-align: right;"><?= $res->reserve_le; ?></td>
                 <td style="text-align: right;">
                     <a href="inc/doSupprimeOrg.php?reserv=<?= $res->rid; ?>" class="btn btn-danger btn-xs" title="supprimer"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a>

@@ -57,8 +57,8 @@ if(isset($_POST['btnSearchNom'])){
             <th>Prénom</th>
             <th>Type</th>
             <th>Bloc</th>
-            <th>Pl.Adulte</th>
-            <th>Pl.Enfant</th>
+            <th>Nb. places</th>
+
             <th style="text-align: right;">Montant</th>
             <th style="text-align: right;">Réservé le</th>
             <th style="text-align: right;">Payé le</th>
@@ -76,7 +76,7 @@ if(isset($_POST['btnSearchNom'])){
                 <td style="text-align: left;color:green;"><?= $res->type; ?></td>
                 <td style="text-align: left;"><?= $res->bloc; ?></td>
                 <td style="text-align: left;"><?= $res->nbplaces; ?></td>
-                <td style="text-align: left;"><?= $res->nbplaces_half; ?></td>
+
                 <td style="text-align: right;"><?= $res->montant; ?> €</td>
                 <td style="text-align: right;"><?= $res->reserve_le; ?></td>
                 <td style="text-align: right;"><?= $res->paye_le; ?></td>

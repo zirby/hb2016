@@ -108,10 +108,8 @@ $("#bloc_a").click(function () {selectBloc("bloc_a");});
             "dataType": "json",
             "data": {
                 "inputPlaces": $('#inputPlaces').val(),
-                "inputPlacesHalf":$('#inputPlacesHalf').val(),
                 "inputBeneficiaire":$('#inputBeneficiaire').val(),
                 "inputOrganisateur":$('#inputOrganisateur').val(),
-                "inputMontant": $('#inputMontant').val(),
                 "inputType": $('#inputType').val(),
                  "bloc": placeBloc,
             },
