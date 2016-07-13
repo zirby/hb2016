@@ -1,6 +1,6 @@
 <?php
-//$pdo = new PDO('mysql:dbname=hb2016;host=localhost', 'root', 'root'); // Mac
-$pdo = new PDO('mysql:dbname=hb2016;host=localhost', 'root', 'admin');  // Win 10
+$pdo = new PDO('mysql:dbname=hb2016;host=localhost', 'root', 'root'); // Mac
+//$pdo = new PDO('mysql:dbname=hb2016;host=localhost', 'root', 'admin');  // Win 10
 //$pdo = new PDO('mysql:dbname=countrytickets_eu_hand2016;host=countrytickets.eu.mysql', 'countrytickets_eu_hand2016', 'handadmin'); // one.com
 
 
