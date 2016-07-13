@@ -60,6 +60,10 @@
                     <?php if(isset($_SESSION['auth'])):?>
                     <li><a class="page-scroll" href="reservations.php">Mijn reserveringen</a></li>
                     <li><a class="page-scroll" href="logout.php">Afmelden</a></li>
+                    <li><a class="page-scroll" href="../../nl/index.php"><span class="flag-icon flag-icon-nl"></span></a></li>
+                    <li><a class="page-scroll" href="../../fr/index.php"><span class="flag-icon flag-icon-fr"></span></a></li>
+                    <li><a class="page-scroll" href="../../de/index.php"><span class="flag-icon flag-icon-de"></span></a></li>
+                    <li><a class="page-scroll" href="../../en/index.php"><span class="flag-icon flag-icon-gb"></span></a></li>
                     <?php else: ?>
                     <li><a class="page-scroll" href="register.php">Inschrijven</a></li>
                     <li><a class="page-scroll" href="login.php">Melden</a></li>
