@@ -13,6 +13,7 @@
                 <h1>FAQ</h1>
                 
             <dl>
+            
               <dt>Puis-je choisir mon siège dans la salle ?</dt>
               <dd>Non. Vous pouvez choisir le bloc (en cliquant dessus, vous verrez apparaître le nombre de places disponibles).</dd>
               <dd>Nous vous attribuons la meilleure place disponible dans ce bloc.</dd>
@@ -22,17 +23,17 @@
               
               <dt>Dois-je remplir tous les champs du formulaire inscription ?</dt>
               <dd>Oui. Ces données sont indispensables pour assurer une bonne exécution de votre commande.</dd>
-              <!--
-              <dt>Comment savoir si ma commande a bien été enregistrée ?</dt>
-              <dd>Lorsque vous aurez cliqué sur CONFIRMER (après avoir bien vérifié le contenu de votre commande), un écran de confirmation apparaîtra avec les instructions de paiement. VEUILLEZ IMPRIMER CE DOCUMENT. Ce paiement doit impérativement nous parvenir endéans les 3 jours sinon votre réservation sera automatiquement annulée.</dd>
-              -->
-              <dt>Puis-je suivre l'exécution de ma commande ?</dt>
-              <dd>Oui. Cliquer sur MES RESERVATIONS.</dd>
+
+              <dt>Quel est le moyen de paiement ?</dt>
+              <dd>Pour la sécurité, UNIQUEMENT par virement bancaire, endéans les trois jours après votre commande. Passé ce délai, cette commande est annulée et les places remises à la réservation.</dd>
+
+              <dt>Comment vais-je recevoir mes places ?</dt>
+              <dd>Par voie postale, 6 jours après réception de votre paiement.</dd>
+
+              <dt>Comment puis-je suivre l'exécution de ma commande ?</dt>
+              <dd>En cliquant sur MES RESERVATIONS dans le menu après s'être connecté.</dd>
               
-              <!--
-              <dt>Dans quel délai recevrai-je mes tickets et par quel moyen ?</dt>
-              <dd>Votre commande sera traitée dès réception de votre paiement et les tickets envoyés par courrier ordinaire à votre adresse dans un délai de 10 à 20 jours.</dd>
-              -->
+
             </dl>
             </div>
         </div>
