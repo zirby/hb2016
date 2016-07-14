@@ -14,14 +14,14 @@ $index = "index.php";
         <a href="<?= $index ?>" class="btn btn-primary btn-lg" title="<retour"  role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
     </div>
     <div class="col-md-4">
-        <p style="text-align: center"><h1>Confirmation</h1></p>
+        <p style="text-align: center"><h1>Bevestiging</h1></p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-6 text-left">
         <div class="panel panel-info">
-            <div class="panel-heading">Envoyer à : </div>
+            <div class="panel-heading">Verzonden : </div>
             <div class="panel-body">
                 <?= $_SESSION['auth']->firstname; ?>  <b><?= $_SESSION['auth']->lastname; ?></b><br>
                 <?= $_SESSION['auth']->address; ?><br>
@@ -29,20 +29,20 @@ $index = "index.php";
                 <?= $_SESSION['auth']->country; ?><br><br>
             </div>
             <div class="panel-footer text-right">
-                <a href="account.php" role="button" class="btn btn-info">Modifier</a>
+                <a href="account.php" role="button" class="btn btn-info">Verandering</a>
             </div>
         </div>
     </div>
     <div class="col-md-6 text-left">
         <div class="panel panel-success">
-            <div class="panel-heading">Commande : </div>
+            <div class="panel-heading">Bestelling : </div>
             <div class="panel-body">
                 <table class="table">
-                    <tr><th><?= $_SESSION['placeBloc']; ?></th><th><?= $_SESSION['placeFullNb']; ?> place(s)</th></tr>
+                    <tr><th><?= $_SESSION['placeBloc']; ?></th><th><?= $_SESSION['placeFullNb']; ?> plaats(en)</th></tr>
                </table>
             </div>
             <div class="panel-footer text-right">
-                Pour un total de: <b><?= $_SESSION['priceTot']; ?> €</b>
+                Voor een totaal van: <b><?= $_SESSION['priceTot']; ?> €</b>
             </div>
         </div>
     </div>
@@ -51,7 +51,7 @@ $index = "index.php";
 
 
 <form action="commandes.php" method="POST">
-        <button type="submit" id="btnPrePayer" name="btnPrePayer"  class="btn btn-primary btn-lg">Confirmer</a>
+        <button type="submit" id="btnPrePayer" name="btnPrePayer"  class="btn btn-primary btn-lg">Bevestigen</a>
 </form>
 
 

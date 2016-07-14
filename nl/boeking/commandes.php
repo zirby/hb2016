@@ -26,46 +26,47 @@ if(isset($_SESSION['resId'])){
         <a href="<?= $index ?>" class="btn btn-primary btn-lg" title="<retour" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
     </div>
     <div class="col-md-4">
-        <p style="text-align: center"><h1>Ma commande</h1></p>
+        <p style="text-align: center"><h1>Mijn bestelling</h1></p>
     </div>
 </div>
 <div class="row">
     <div class="col-md-6 text-center">
         <div class="panel panel-warning">
-            <div class="panel-heading">Information</div>
+            <div class="panel-heading">Informatie</div>
             <div class="panel-body">
-                <p><strong>Bonjour M<small>r</small>/M<small>me</small> <?= $_SESSION['auth']->lastname; ?></strong></p>
-                <p>Votre réservation a bien été enregistrée.</p>
+                <p><strong>Goedendag Mijnheer/Mevrouw <?= $_SESSION['auth']->lastname; ?></strong></p>
+                <p>Uw reservering werd wel degelijk geregisteert.</p>
                 <p></p>
-                <!--<p>Etant donné la proximité de l'événement et afin d'éviter d'éventuels retards postaux,vos tickets seront tenus à votre disposition aux guichets du COUNTRY HALL le jour de la rencontre à partir de 12 heures contre présentation de ce document et paiement de la somme ci-dessus.</p>-->
-                <p>Le montant de votre commande devra être versé sur le compte:<br />
+
+                <p>Het bedrag van uw bestelling zal op de rekering van:<br />
                 <b>CAPella - Ch. ZIRBES</b><br />
+                betaald moeten<br />
                 <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
-                avec en référence: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
-                <p>endéans les 3 jours. Passé ce délai, votre réservation sera automatiquement annulée.</p>
-                <p>Les tickets vous seront envoyées par voie postale endéans les 6 jours après réception de votre paiement.</p>
-                <p>*** IMPRIMER CE DOCUMENT SVP ***</p>
-                <p>MERCI DE VOTRE COMMANDE</p>
+                met in mededeling: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
+                <p>binnen de 3 dagen. Bij het overschrijden van deze termijn , zal uw reserveringautomatisch geannuleerd worden.</p>
+                <p>Uw tickets zal u per post ontvangen, acht dagen na ontvangst van uw betaling.</p>
+                <p>*** Gelieve dit document af te drukken aub. ***</p>
+                <p>BEDANKT VOOR UW BESTELLING</p>
                 
-                <p class=" small text-danger"><b>Il n'y a pas de mail de confirmation.<br/> Pour suivre votre réservation, cliquez sur MES RESERVATIONS</b></p>
+                <p class=" small text-danger"><b>Dit geldt als bevestiging. U zult geen e-mail ontvangen.<br/> Om uw bestelling te volgen, klik op MIJN RESERVERINGEN</b></p>
             </div>
             <div class="panel-footer text-center">
-                <a href="reservations.php"  class="btn btn-info btn-lg">Voir mes réservations</a>
+                <a href="reservations.php"  class="btn btn-info btn-lg">zee mijn reserveringen</a>
             </div>
         </div>
     </div>
     <div class="col-md-6 text-left">
         <div class="panel panel-success">
-            <div class="panel-heading">Commande : </div>
+            <div class="panel-heading">Bestelling : </div>
             <div class="panel-body">
                 <table class="table">
                     <tr><th>N°</th><th><?= $reservationId; ?></th></tr>
                     <tr><th>Bloc</th><th><?= $_SESSION['placeBloc']; ?></th></tr>
-                    <tr><th><?= $_SESSION['placeFullNb']; ?></th><td>place(s)</td></tr>
+                    <tr><th><?= $_SESSION['placeFullNb']; ?></th><td>plaats(en)</td></tr>
                </table>
             </div>
             <div class="panel-footer text-right">
-                Pour un total de: <b><?= $_SESSION['priceTot']; ?> €</b>
+                Voor een totaal van: <b><?= $_SESSION['priceTot']; ?> €</b>
             </div>
         </div>
     </div>

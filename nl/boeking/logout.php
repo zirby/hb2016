@@ -5,5 +5,5 @@ session_start();
 $index = "index".$j.".php";
 unset($_SESSION['auth']);
 setcookie('remember', NULL, -1);
-$_SESSION['flash']['success'] = "Vous êtes maintenant déconnecté";
+$_SESSION['flash']['success'] = "U bent nu offline";
 header('Location: '.$index);

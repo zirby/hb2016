@@ -21,7 +21,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     $user = $req->fetch();
     if($user && password_verify($_POST['password'], $user->password)){
         $_SESSION['auth'] = $user;
-        $_SESSION['flash']['success']="Vous êtes bien connecté";
+        $_SESSION['flash']['success']="U bent verbonden";
         if(!$_SESSION['placeFullNb'] && !$_SESSION['placeHalfNb'] ){
             header('Location: reservations.php');
         }else{
@@ -37,27 +37,27 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
 <?php require 'inc/header.php'; ?>
         <div class="row">
             <div class="col-md-4 text-left">
-                <a href="<?= $index ?>" class="btn btn-primary btn-lg" title="<retour" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+                <a href="<?= $index ?>" class="btn btn-primary btn-lg" title="<terug" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
             </div>
             <div class="col-md-4">
-                <p style="text-align: center"><h1>Connexion</h1></p>
+                <p style="text-align: center"><h1>Log in</h1></p>
             </div>
         </div>
 <div class="col-md-6">
     <div class="alert alert-success" role="alert">
-        <p><strong>Pour valider votre réservation</strong><br /></p>
-        Vous devez vous connecter.
+        <p><strong>Om uw boeking te bevestigen</strong><br /></p>
+        U moet zich aanmelden.
         <div style="height: 40px;"></div>
-        <p>Pas encore inscrit ?</p>
+        <p>Nog niet geregistreerd?</p>
         <div style="height: 40px;"></div>
-        <a href="register.php" id="btnSinscrire" type="button" class="btn btn-success btn-lg">S'inscrire ! </a>
+        <a href="register.php" id="btnSinscrire" type="button" class="btn btn-success btn-lg">Inschrijven ! </a>
     </div>
     
 </div>
 <div class="col-md-6">
 <form action="" method="POST" class="form-horizontal">
   <fieldset>
-    <legend><h3>Se connecter</h3></legend>
+    <legend><h3>Log in</h3></legend>
     <?php if(!empty($errors)):?>
         <div class="alert alert-danger">
             <ul>
@@ -76,8 +76,8 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     <div class="form-group">
         <label for="password" class="col-lg-4 control-label">Watchwoord</label>
       <div class="col-lg-8">
-          <input class="form-control" name="password" id="password" placeholder="Mot de passe" type="password" value="<?= $psswd; ?>">
-        <span class="help-block"><a href="forget.php">(j'ai oublié mon mot de passe)</a></span>
+          <input class="form-control" name="password" id="password" placeholder="Watchwoord" type="password" value="<?= $psswd; ?>">
+        <span class="help-block"><a href="forget.php">(Ik ben mijn wachtwoord vergeten)</a></span>
       </div>
     </div>
     <div class="form-group">

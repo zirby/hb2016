@@ -16,21 +16,21 @@ require_once '../../inc/conn.php';
                 <a href="<?= $index ?>" class="btn btn-primary btn-lg" title="<retour" role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
             </div>
             <div class="col-md-4">
-                <p style="text-align: center"><h1>Mes réservations</h1></p>
+                <p style="text-align: center"><h1>Mijn reserveringen</h1></p>
             </div>
         </div>
 <div class="col-md-12">
     <table class="table">
         <thead>
-            <th>N° reservation</th>
+            <th>#</th>
             <th>Type</th>
-            <th>Bloc</th>
-            <th>Nb Places</th>
+            <th>Blok</th>
+            <th>Zitplaats</th>
 
-            <th style="text-align: right;">Montant</th>
-            <th style="text-align: right;">Réservé le</th>
-            <th style="text-align: right;">Payé le</th>
-            <th style="text-align: right;">Envoyé le</th>
+            <th style="text-align: right;">Bedrag</th>
+            <th style="text-align: right;">Voorbehouden de</th>
+            <th style="text-align: right;">Betaalde de</th>
+            <th style="text-align: right;">Gepost de</th>
         </thead>
         <tbody>
             <?php while($res = $req->fetch()): ?>
@@ -49,10 +49,10 @@ require_once '../../inc/conn.php';
         </tbody>
     </table>
 </div>
-<p class=" small text-primary">Le montant de votre commande devra être versé sur le compte:<br />
+<p class=" small text-primary">Het bedrag van uw bestelling zal worden gestort op de rekening:<br />
                 <b>CAPella - Ch. ZIRBES</b><br />
                 <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
-                avec en référence: <b>N° réservation - <?= $_SESSION['auth']->lastname; ?></b></p>
+                met in mededeling: <b>Reserveringsnummer - <?= $_SESSION['auth']->lastname; ?></b></p>
 <!-- <p class=" small text-primary"><b>A partir du 28/02, le montant des commandes est à payer au guichet le jour de la rencontre.</b></p> -->
 
 <?php require 'inc/footer.php'; ?>

@@ -14,7 +14,7 @@ if(isset($_GET['id']) && isset($_GET['token'])){
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
             $req = $pdo->prepare("UPDATE cd16_users SET password = ?, reset_token = NULL, reset_at = NULL  WHERE id=?");
             $req->execute([$password, $user->id]);
-            $_SESSION['flash']['success'] = "le mot de passe à bien été réinitialisé";
+            $_SESSION['flash']['success'] = "het wachtwoord in om met succes opnieuw in te stellen";
             $_SESSION['auth'] = $user;
         if(!$_SESSION['placeNb']){
             header('Location: reservations.php');
@@ -24,10 +24,10 @@ if(isset($_GET['id']) && isset($_GET['token'])){
             exit();
         }
     }else{
-            echo "les mots de passe ne sont pas identiques";
+            echo "Wachtwoorden zijn niet identiek";
         }
     }else{
-        echo  "ce token n'est pas valide";
+        echo  "Deze token is ongeldig";
         header('Location: login.php');
         exit();
     }
@@ -39,17 +39,17 @@ if(isset($_GET['id']) && isset($_GET['token'])){
 <?php require 'inc/header.php'; ?>
 <form action="" method="POST" class="form-horizontal">
   <fieldset>
-    <legend><h1>Modifier le mot de passe</h1></legend>
+    <legend><h1>Het wachtwoord wijzigen</h1></legend>
     <div class="form-group">
-      <label for="password" class="col-lg-2 control-label">Password</label>
+      <label for="password" class="col-lg-2 control-label">Wachtwoord</label>
       <div class="col-lg-10">
-        <input class="form-control" name="password" id="password" placeholder="Changer de mot de passe" type="password">
+        <input class="form-control" name="password" id="password" placeholder="wachtwoord wijzigen" type="password">
       </div>
     </div>
     <div class="form-group">
-      <label for="passwordConfirm" class="col-lg-2 control-label">Confirmer le Password</label>
+      <label for="passwordConfirm" class="col-lg-2 control-label">Bevestig wachtwoord</label>
       <div class="col-lg-10">
-        <input class="form-control" name="passwordConfirm" id="password" placeholder="confirmer mot de passe" type="password">
+        <input class="form-control" name="passwordConfirm" id="password" placeholder="bevestig wachtwoord" type="password">
       </div>
     </div>
     <div class="form-group">

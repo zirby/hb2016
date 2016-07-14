@@ -109,11 +109,7 @@ while($res = $req->fetch()){
         <div class="col-md-4" id="pPriceAd"></div>
         <div class="col-md-4"><input id="inputPlaces" type="text" class="form-control" value="0"></div>
     </div>
-    <!-- <div class="row sp_50">
-        <div class="col-md-6 text-left"><h5>Enfants</h5></div>
-        <div class="col-md-4" id="pPriceEn"></div>
-        <div class="col-md-2"><input id="inputPlacesHalf" type="text" class="form-control" value="0"></div>
-    </div> -->
+
  
     <div class="row sp_50">
         <div class="col-md-12">

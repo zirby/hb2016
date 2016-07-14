@@ -15,13 +15,13 @@ if(!empty($_POST) && !empty($_POST['email']) ){
         $destinataire = $_POST['email'];
         // Pour les champs $expediteur / $copie / $destinataire, séparer par une virgule s'il y a plusieurs adresses
         $expediteur = 'reservation@countrytickets.eu';
-        $objet = 'Réinitialisation de votre mot de passe'; // Objet du message
+        $objet = 'Resetten van het wachtwoord'; // Objet du message
         $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
         $headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n"; // l'en-tete Content-type pour le format HTML
         $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
         $headers .= 'From: "Countrytickets.eu"<'.$expediteur.'>'."\n"; // Expediteur
         $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
-        $message = '<div style="width: 100%; text-align: center; font-weight: bold">Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien<br />http://Countrytickets.eu/Coupe_Davis_2016/reset.php?id='.$user->id.'&token='.$reset_token.'</div>';
+        $message = '<div style="width: 100%; text-align: center; font-weight: bold">Om uw wachtwoord opnieuw in te stellen, dank u om te klikken op deze link<br />http://Countrytickets.eu/Hand_2016/reset.php?id='.$user->id.'&token='.$reset_token.'</div>';
         if (mail($destinataire, $objet, $message, $headers)){        
             header('Location: login.php');
             exit();
@@ -32,15 +32,15 @@ if(!empty($_POST) && !empty($_POST['email']) ){
             exit();
         }
     }else{
-        $errors['nomail']="<div class='alert alert-danger'>aucun compte ne correspont à cet email</div>";
+        $errors['nomail']="<div class='alert alert-danger'>geen rekening overeenkomt met deze e-mail</div>";
     }
 }
 ?>
 <?php require 'inc/header.php'; ?>
 <form action="" method="POST" class="form-horizontal">
   <fieldset>
-    <legend><h1>Mot de passe oublié</h1></legend>
-    <p>Les instructions du rappel de mot de passe vous seront envoyées par email</p>
+    <legend><h1>Wachtwoord vergeten</h1></legend>
+    <p>Wachtwoord herinnering aan de instructies zal worden verzonden per e-mail</p>
     <?php if(!empty($errors)):?>
             <?php  foreach($errors as $error): ?>
                 <?= $error; ?>

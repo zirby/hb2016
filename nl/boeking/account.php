@@ -57,13 +57,13 @@ if(!empty($_POST)){
     <?php endif; ?>
     <div class="col-md-6 col-md-offset-3">
       <div class="form-group">
-        <label for="lastname" class="col-lg-3 control-label">Nom<sup style="color:red;">*</sup></label>
+        <label for="lastname" class="col-lg-3 control-label">Naam<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="text" class="form-control" style="text-transform: uppercase" name="lastname" id="lastname" value="<?= $_SESSION['auth']->lastname; ?>">
         </div>
       </div>
       <div class="form-group">
-        <label for="firstname" class="col-lg-3 control-label">Prénom<sup style="color:red;">*</sup></label>
+        <label for="firstname" class="col-lg-3 control-label">Voornaam<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="text" class="form-control" name="firstname" id="firstname"  value="<?= $_SESSION['auth']->firstname; ?>">
           <span id="helpFirstName"></span>
@@ -71,35 +71,35 @@ if(!empty($_POST)){
       </div>
 
     <div class="form-group">
-        <label for="inputAdr" class="col-lg-3 control-label">Adresse<sup style="color:red;">*</sup></label>
+        <label for="inputAdr" class="col-lg-3 control-label">Adres<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="text" class="form-control" name="inputAdr" id="inputAdr"  value="<?= $_SESSION['auth']->address; ?>">
           <span id="helpAdr"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputZip" class="col-lg-3 control-label">Code<sup style="color:red;">*</sup></label>
+        <label for="inputZip" class="col-lg-3 control-label">Postcode<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="text" class="form-control" name="inputZip" id="inputZip"  value="<?= $_SESSION['auth']->code; ?>">
           <span id="helpZip"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputLocal" class="col-lg-3 control-label">Localité<sup style="color:red;">*</sup></label>
+        <label for="inputLocal" class="col-lg-3 control-label">Gemeente<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="text" class="form-control" name="inputLocal" id="inputLocal"  value="<?= $_SESSION['auth']->localite; ?>">
           <span id="helpLocal"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPays" class="col-lg-3 control-label">Pays<sup style="color:red;">*</sup></label>
+        <label for="inputPays" class="col-lg-3 control-label">Land<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="text" class="form-control" name="inputPays" id="inputPays"  value="<?= $_SESSION['auth']->country; ?>">
           <span id="helpPays"></span>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPhone" class="col-lg-3 control-label">Téléphone<sup style="color:red;">*</sup></label>
+        <label for="inputPhone" class="col-lg-3 control-label">Telephonnummer<sup style="color:red;">*</sup></label>
         <div class="col-lg-9">
           <input type="text" class="form-control" name="inputPhone" id="inputPhone"  value="<?= $_SESSION['auth']->telephone; ?>">
           <span id="helpPhone"></span>
