@@ -39,10 +39,10 @@ if(!empty($_POST)){
     <legend>
         <div class="row">
             <div class="col-md-4 text-left">
-                <a href="confirmation.php" class="btn btn-primary btn-lg" title="<retour"  role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+                <a href="confirmation.php" class="btn btn-primary btn-lg" title="<terug"  role="button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
             </div>
             <div class="col-md-4">
-                <p style="text-align: center"><h1>Mon compte</h1></p>
+                <p style="text-align: center"><h1>Mijn rekening</h1></p>
             </div>
         </div>
     </legend>
