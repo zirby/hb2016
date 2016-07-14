@@ -11,12 +11,12 @@ if(!empty($_POST)){
     $errors = array();
     
     
-    if(empty($_POST['lastname'])){$errors['lastname']="Entrez votre nom";}
-    if(empty($_POST['firstname'])){$errors['firstname']="Entrez votre prénom";}
-    if(empty($_POST['inputAdr'])){$errors['inputAdr']="Entrez votre adresse";}
-    if(empty($_POST['inputZip'])){$errors['inputZip']="Entrez votre code postal";}
-    if(empty($_POST['inputLocal'])){$errors['inputLocal']="Entrez votre localité";}
-    if(empty($_POST['inputPhone'])){$errors['inputPhone']="Entrez votre n° de téléphone";}
+    if(empty($_POST['lastname'])){$errors['lastname']="Voer uw naam in";}
+    if(empty($_POST['firstname'])){$errors['firstname']="Voer uw voornaam";}
+    if(empty($_POST['inputAdr'])){$errors['inputAdr']="Voer uw adresse";}
+    if(empty($_POST['inputZip'])){$errors['inputZip']="Voer uw Postcode";}
+    if(empty($_POST['inputLocal'])){$errors['inputLocal']="Voer uw Gemeente";}
+    if(empty($_POST['inputPhone'])){$errors['inputPhone']="Voer uw Telephonnummer";}
     if (empty($errors)){
         
         $req = $pdo->prepare("UPDATE hb16_users SET firstname = ?,lastname = ?,address = ?,code = ?,localite = ?,country=?,telephone = ? WHERE id=?");
