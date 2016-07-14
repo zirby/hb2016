@@ -38,6 +38,8 @@
           <ul class="nav navbar-nav">
           </ul>
           <ul class="nav navbar-nav navbar-right">
+              <li><a  href="index.php">Réservation</a></li>
+              <li><a  href="rapport.php">Rapport</a></li>
           </ul>
         </div>
       </div>

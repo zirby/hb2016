@@ -75,8 +75,8 @@ if(isset($_POST['btnSearchNom'])){
         <thead>
             <th>Catégorie</th>
             <th>Nb. tickets ORG</th>
-            <th>Nb. tickets réservé</th>
-            <th>Nb. tickets payé</th>
+            <th>Nb. tickets réservés</th>
+            <th>Nb. tickets payés</th>
 
             <th style="text-align: right;">Montants encaissés</th>
             <th style="text-align: right;">Montants pour ORG</th>
@@ -96,7 +96,7 @@ if(isset($_POST['btnSearchNom'])){
             <tr>
                 <td style="text-align: left;">Cat. 2 (20€)</td>
                 <td style="text-align: left;"></td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;">2</td>
                 <td style="text-align: left;">1</td>
 
                 <td style="text-align: right;">20.00€</td>
@@ -106,7 +106,7 @@ if(isset($_POST['btnSearchNom'])){
             <tr>
                 <td style="text-align: left;">Cat. 3 (15€)</td>
                 <td style="text-align: left;"></td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;">3</td>
                 <td style="text-align: left;">1</td>
 
                 <td style="text-align: right;">15.00€</td>
@@ -116,7 +116,7 @@ if(isset($_POST['btnSearchNom'])){
             <tr>
                 <td style="text-align: left;">Cat. 4 (10€)</td>
                 <td style="text-align: left;"></td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;">4</td>
                 <td style="text-align: left;">1</td>
 
                 <td style="text-align: right;">10.00€</td>
