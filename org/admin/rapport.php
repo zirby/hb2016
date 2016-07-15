@@ -123,24 +123,36 @@ if(isset($_POST['btnSearchNom'])){
                 <td style="text-align: right;">7.58€</td>
                 <td style="text-align: right;">2.42€</td>
              </tr>
+            <tr  class="success">
+                <th colspan="2" style="text-align: right;"><b>TOTAL: </b></th>
+
+                <th style="text-align: left;">10</th>
+                <th style="text-align: left;">4</th>
+                <th style="text-align: right;">70.00€</th>
+                <th style="text-align: right;">60.32€</th>
+                <th style="text-align: right;">9.68€</th>
+             </tr>
             <tr>
                 <td style="text-align: left;">ORG</td>
                 <td style="text-align: left;">1</td>
                 <td style="text-align: left;"></td>
                 <td style="text-align: left;"></td>
 
-                <td style="text-align: right;">0.00€</td>
-                <td style="text-align: right;">0.00€</td>
+                <td style="text-align: right;"></td>
+                <td style="text-align: right;"></td>
                 <td style="text-align: right;">1.21€</td>
              </tr>
-             <tr>
-                <td colspan="4" style="text-align: right;"><b>TOTAL: </b></td>
-
-                <td style="text-align: right;">70.00€</td>
-                <td style="text-align: right;">60.32€</td>
-                <td style="text-align: right;">10.89€</td>
+            <tr  class="danger">
+                <th colspan="6" style="text-align: right;"><b>TOTAL COUNTRYTICKETS.EU: </b></th>
+                <th style="text-align: right;">10.89€</th>
              </tr>
-       </tbody>
+           <tr class="danger">
+                <th colspan="6" style="text-align: right;"><b>TOTAL ORGANISATEURS: </b></th>
+                <th style="text-align: right;">59.11€</th>
+             </tr>
+
+
+        </tbody>
     </table>
 </div>
 
