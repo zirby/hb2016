@@ -1,8 +1,27 @@
 <?php
 
-$locale = locale_get_default();
-$langue = locale_get_primary_language ($locale );
+
 $localel = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+switch (substr($localel, 0, 2)) {
+    case 'fr':
+        header('Location: fr/reservation/index.php');
+        break;
+    case 'nl':
+        header('Location: nl/boeking/index.php');
+        break;
+    case 'de':
+        header('Location: de/buchung/index.php');             
+        break;
+    case 'en':
+        header('Location: en/booking/index.php');
+        break;
+    
+    default:
+        header('Location: fr/reservation/index.php');
+        break;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +33,9 @@ $localel = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 <body>
 
     <h1>Page Hand_2016</h1>
-    <p>Première page.</p>
-    <p>La locale est: <?= $locale; ?>
-    <p>La langue est: <?= $langue; ?>
-    <p>La locale langue est: <?= $localel; ?>
+
+
+    <p>Locale language: <?= $localel; ?>
 
 </body>
 </html>
