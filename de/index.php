@@ -1,5 +1,5 @@
 <?php
-//header('Location: boeking/index.php');
+//header('Location: bushung/index.php');
 ?>
 <!DOCTYPE html>
 <html>
