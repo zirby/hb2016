@@ -63,14 +63,12 @@
                     <li><a class="page-scroll" href="../../nl/index.php"><span class="flag-icon flag-icon-nl"></span></a></li>
                     <li><a class="page-scroll" href="../../fr/index.php"><span class="flag-icon flag-icon-fr"></span></a></li>
                     <li><a class="page-scroll" href="../../de/index.php"><span class="flag-icon flag-icon-de"></span></a></li>
-                    <li><a class="page-scroll" href="../../en/index.php"><span class="flag-icon flag-icon-gb"></span></a></li>
                     <?php else: ?>
                     <li><a class="page-scroll" href="register.php">Schrijf in</a></li>
                     <li><a class="page-scroll" href="login.php">Log in</a></li>
                     <li><a class="page-scroll" href="../../nl/index.php"><span class="flag-icon flag-icon-nl"></span></a></li>
                     <li><a class="page-scroll" href="../../fr/index.php"><span class="flag-icon flag-icon-fr"></span></a></li>
                     <li><a class="page-scroll" href="../../de/index.php"><span class="flag-icon flag-icon-de"></span></a></li>
-                    <li><a class="page-scroll" href="../../en/index.php"><span class="flag-icon flag-icon-gb"></span></a></li>
                     <?php endif; ?>
                 </ul>
             </div>

@@ -44,7 +44,8 @@ function selectBloc(bloc) {
                 $("#pZone").html(data.zone);
                 $("#pBloc").html("<button class='btn btn-" + data.color + "' type='button'>" + data.bloc + " <span class='badge'>" + data.nb + "</span></button>");
                 
-                $("#pPriceAd").html(data.price + ".00 €");
+                //$("#pPriceAd").html(data.price + ".00 €");
+                $("#pPriceAd").html("<button class='btn btn-" + data.color_price + "' type='button'>" + data.price + ".00 € </button>");
                 $("#pPriceEn").html(data.price_half + ".00 €");
                 
                 priceUnit = data.price;

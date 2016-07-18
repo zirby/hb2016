@@ -21,5 +21,6 @@ $result['price']= $places->price;
 $result['price_half']= $places->price_half;
 
 $result['color']= $places->color;
+$result['color_price']= $places->color_price;
 
 echo json_encode($result);

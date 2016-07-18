@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Countrytickets.eu</h2>
-                <p>Si vous n'avez pas trouvé de réponse à votre question, adressez nous un mail à</p>
+                <p>Wenn Sie keine Antwort auf Ihre Frage gefunden haben, schicken Sie uns eine E-Mail an</p>
                 <p><a href="mailto:info@countrytickets.eu">info@countrytickets.eu</a>
                 </p>
              </div>
