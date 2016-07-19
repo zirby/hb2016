@@ -40,7 +40,7 @@ if(isset($_POST['btnSearchNom'])){
 
 <div class="row text-center">
     <div class="col-md-12">
-        <button type="button" class="btn btn-default"><h2>Rapport billeterie - Organisateurs - <?= $org; ?></h2></button>
+        <button type="button" class="btn btn-default"><h2>Rapport billetterie - Organisateurs - <?= $org; ?></h2></button>
     </div>
     <div class="col-md-12" style="height: 20px;"></div>
 </div>
@@ -80,7 +80,7 @@ if(isset($_POST['btnSearchNom'])){
 
             <th style="text-align: right;">Montants encaissés</th>
             <th style="text-align: right;">Montants pour ORG</th>
-            <th style="text-align: right;">Montants pour Country.</th>
+            <th style="text-align: right;">Montants pour CAPella.</th>
         </thead>
         <tbody>
             <tr>

@@ -77,7 +77,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
         <label for="password" class="col-lg-4 control-label">Watchwoord</label>
       <div class="col-lg-8">
           <input class="form-control" name="password" id="password" placeholder="Watchwoord" type="password" value="<?= $psswd; ?>">
-        <span class="help-block"><a href="forget.php">(Ik ben mijn wachtwoord vergeten)</a></span>
+        <span class="help-block"><a href="forget.php">(Ik heb mijn wachtwoord vergeten)</a></span>
       </div>
     </div>
     <div class="form-group">

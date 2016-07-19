@@ -35,7 +35,7 @@ if(isset($_SESSION['resId'])){
             <div class="panel-heading">Informatie</div>
             <div class="panel-body">
                 <p><strong>Goedendag Mijnheer/Mevrouw <?= $_SESSION['auth']->lastname; ?></strong></p>
-                <p>Uw reservering werd wel degelijk geregisteert.</p>
+                <p>Uw reservering werd wel degelijk geregistreert.</p>
                 <p></p>
 
                 <p>Het bedrag van uw bestelling zal op de rekering van:<br />
@@ -43,7 +43,7 @@ if(isset($_SESSION['resId'])){
                 betaald moeten<br />
                 <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
                 met in mededeling: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
-                <p>binnen de 3 dagen. Bij het overschrijden van deze termijn , zal uw reserveringautomatisch geannuleerd worden.</p>
+                <p>binnen de 3 dagen. Bij het overschrijden van deze termijn , zal uw reservering automatisch geannuleerd worden.</p>
                 <p>Uw tickets zal u per post ontvangen, acht dagen na ontvangst van uw betaling.</p>
                 <p>*** Gelieve dit document af te drukken aub. ***</p>
                 <p>BEDANKT VOOR UW BESTELLING</p>

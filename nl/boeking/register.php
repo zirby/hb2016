@@ -149,7 +149,7 @@ if(!empty($_POST)){
       </div>
     </div>
     <div class="form-group">
-      <label for="passwordconfirm" class="col-lg-3 control-label">Bevsetig wachtwoord<sup style="color:red;">*</sup></label>
+      <label for="passwordconfirm" class="col-lg-3 control-label">Bevestig wachtwoord<sup style="color:red;">*</sup></label>
       <div class="col-lg-9">
         <input class="form-control" name="passwordconfirm" id="passwordconfirm"  type="password" placeholder="Wachtwoord">
       </div>
