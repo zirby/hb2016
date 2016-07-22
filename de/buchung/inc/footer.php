@@ -14,25 +14,25 @@
                 
             <dl>
 
-              <dt>Puis-je choisir mon siège dans la salle ?</dt>
-              <dd>Non. Vous pouvez choisir le bloc (en cliquant dessus, vous verrez apparaître le nombre de places disponibles).</dd>
-              <dd>Nous vous attribuons la meilleure place disponible dans ce bloc.</dd>
-              
-              <dt>J'éprouve des difficultés à indiquer le nombre de places. Comment dois-je faire ?</dt>
-              <dd>Placez le curseur à droite du chiffre 0 ou 1 indiqué et vous l'effacez avec la flèche "retour arrière" de votre clavier. Vous tapez alors le nombre de places souhaité.</dd>
-              
-              <dt>Dois-je remplir tous les champs du formulaire inscription ?</dt>
-              <dd>Oui. Ces données sont indispensables pour assurer une bonne exécution de votre commande.</dd>
+            <dt> 	Kann ich meinen Sitz im Saal auswählen? </dt>
+            <dd> 	Nein. Sie können den Block wählen ( indem Sie draufklicken, werden Ihnen die Anzahl der freien Platze angezeigt) </dd>
+            <dd> 	Wir geben Ihnen den besten freien Platz in diesem Block. </dd>
 
-              <dt>Quel est le moyen de paiement ?</dt>
-              <dd>Pour la sécurité, UNIQUEMENT par virement bancaire, endéans les trois jours après votre commande. Passé ce délai, cette commande est annulée et les places remises à la réservation.</dd>
+            <dt>	Ich habe Probleme, die Anzahl der gewünschten Plätze einzugeben. Wie muss ich vorgehen? </dt>
+            <dd>	Platzieren Sie den Curser rechts der Ziffer 0 oder 1 und löschen Sie sie mit der Taste 	« retour » auf der Tastatur. Dann geben Sie die gewünschte Anzahl Plätze ein. </dd>
 
-              <dt>Comment vais-je recevoir mes places ?</dt>
-              <dd>Par voie postale, 6 jours après réception de votre paiement.</dd>
+            <dt>	Muss ich alle Felder des Anmeldeformulars ausfüllen? </dt>
+            <dd>	Ja. Alle Angaben sind nötig für eine reibungslose Ausführung der Bestellung. </dd>
 
-              <dt>Comment puis-je suivre l'exécution de ma commande ?</dt>
-              <dd>En cliquant sur MES RESERVATIONS dans le menu après s'être connecté.</dd>
-              
+            <dt>	Wie ist der Bezahlungsmodus? </dt>
+            <dd>	Aus Sicherheitsgründen einzig per Bankanweisung innert dreier Tage nach Bestellungsaufgabe. Erfolgt in diesem Zeitraum keine Bezahlung, wird die Bestellung gelöscht und die Plätze werden für den Verkauf freigegeben. </dd>
+
+            <dt>	Wie komme ich zu meinen Platzkarten? </dt>
+            <dd>	Par Post; sechs Tage nach Eingang der Bezahlung. </dd>
+
+            <dt>	Wie kann ich den Stand der Ausführung meiner Bestellung mitverfolgen? </dd>
+            <dd>	Indem Sie auf « meine Reservationen » klicken, nachdem Sie sich eingeloggt haben. </dd>
+
             </dl>
             </div>
         </div>

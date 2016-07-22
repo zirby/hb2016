@@ -13,7 +13,6 @@
                 <h1>FAQ</h1>
                 
             <dl>
-
               <dt>Puis-je choisir mon siège dans la salle ?</dt>
               <dd>Non. Vous pouvez choisir le bloc (en cliquant dessus, vous verrez apparaître le nombre de places disponibles).</dd>
               <dd>Nous vous attribuons la meilleure place disponible dans ce bloc.</dd>
@@ -31,8 +30,7 @@
               <dd>Par voie postale, 6 jours après réception de votre paiement.</dd>
 
               <dt>Comment puis-je suivre l'exécution de ma commande ?</dt>
-              <dd>En cliquant sur MES RESERVATIONS dans le menu après s'être connecté.</dd>
-              
+              <dd>En cliquant sur MES RESERVATIONS dans le menu après s'être connecté.</dd>             
             </dl>
             </div>
         </div>
