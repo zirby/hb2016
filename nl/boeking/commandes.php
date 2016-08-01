@@ -41,7 +41,7 @@ if(isset($_SESSION['resId'])){
                 <p>Het bedrag van uw bestelling zal op de rekering van:<br />
                 <b>CAPella - Ch. ZIRBES</b><br />
                 betaald moeten<br />
-                <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
+                <b>IBAN: BE54 0017 9153 1897 - BIC: GEBABEBB</b><br />
                 met in mededeling: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
                 <p>binnen de 3 dagen. Bij het overschrijden van deze termijn , zal uw reservering automatisch geannuleerd worden.</p>
                 <p>Uw tickets zal u per post ontvangen, acht dagen na ontvangst van uw betaling.</p>

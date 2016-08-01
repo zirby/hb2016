@@ -40,7 +40,7 @@ if(isset($_SESSION['resId'])){
 
                 <p>Die Höhe Ihrer Bestellung muss überwiesen werden auf dem Konto von:<br />
                 <b>CAPella - Ch. ZIRBES</b><br />
-                <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
+                <b>IBAN: BE54 0017 9153 1897 - BIC: GEBABEBB</b><br />
                 Mit Referenz: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
                 <p>Innerhalb von 3 Tagen. Bei Verstreichung diese Frist wird Ihre Reservierung automatische annulliert.</p>
                 <p>Ihre Tickets werden Ihnen auf dem Postweg in etwa acht Tage nach Eingang Ihrer Zahlung gesendet.</p>

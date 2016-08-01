@@ -51,7 +51,7 @@ require_once '../../inc/conn.php';
 </div>
 <p class=" small text-primary">Het bedrag van uw bestelling zal worden gestort op de rekening:<br />
                 <b>CAPella - Ch. ZIRBES</b><br />
-                <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
+                <b>IBAN: BE54 0017 9153 1897 - BIC: GEBABEBB</b><br />
                 met in mededeling: <b>Reserveringsnummer - <?= $_SESSION['auth']->lastname; ?></b></p>
 <!-- <p class=" small text-primary"><b>A partir du 28/02, le montant des commandes est à payer au guichet le jour de la rencontre.</b></p> -->
 

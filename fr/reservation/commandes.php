@@ -40,7 +40,7 @@ if(isset($_SESSION['resId'])){
                 <!--<p>Etant donné la proximité de l'événement et afin d'éviter d'éventuels retards postaux,vos tickets seront tenus à votre disposition aux guichets du COUNTRY HALL le jour de la rencontre à partir de 12 heures contre présentation de ce document et paiement de la somme ci-dessus.</p>-->
                 <p>Le montant de votre commande devra être versé sur le compte:<br />
                 <b>CAPella - Ch. ZIRBES</b><br />
-                <b>IBAN: BE84 XXXX XXXX XXXX - BIC: GEBA BE BB</b><br />
+                <b>IBAN: BE54 0017 9153 1897 - BIC: GEBABEBB</b><br />
                 avec en référence: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
                 <p>endéans les 3 jours. Passé ce délai, votre réservation sera automatiquement annulée.</p>
                 <p>Les tickets vous seront envoyées par voie postale endéans les 6 jours après réception de votre paiement.</p>

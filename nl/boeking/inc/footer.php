@@ -13,24 +13,39 @@
                 <h1>FAQ</h1>
                 
             <dl>
-              <dt>Puis-je choisir mon siège dans la salle ?</dt>
-              <dd>Non. Vous pouvez choisir le bloc (en cliquant dessus, vous verrez apparaître le nombre de places disponibles).</dd>
-              <dd>Nous vous attribuons la meilleure place disponible dans ce bloc.</dd>
+            
+              <dt>Mag ik mijn zetel kiezen in de zaal?</dt>
+
+              <dd>Nee. U mag de blok kiezen ( door hem aan te klikken u zult dan het aantal vrije plaatsen zien verschijnen).</dd>
+
+              <dd>Wij bieden de beste vrije plaats aan in de blok.</dd>
+
               
-              <dt>J'éprouve des difficultés à indiquer le nombre de places. Comment dois-je faire ?</dt>
-              <dd>Placez le curseur à droite du chiffre 0 ou 1 indiqué et vous l'effacez avec la flèche "retour arrière" de votre clavier. Vous tapez alors le nombre de places souhaité.</dd>
+              <dt>Ik heb het moeilijk de nodige plaatsen aan te geven. Hoe moet ik het doen?</dt>
+
+              <dd>Door cursor rechts van het cijfer 0 of 1 en plaatsen, het uitvegen door middel van het pijltje met de backspace en daarna vult u het aantal gewenste plaatsen in.</dd>
+ 
               
-              <dt>Dois-je remplir tous les champs du formulaire inscription ?</dt>
-              <dd>Oui. Ces données sont indispensables pour assurer une bonne exécution de votre commande.</dd>
+              <dt>Moet ik alle tekstvelden van het formulier invullen?</dt>
 
-              <dt>Quel est le moyen de paiement ?</dt>
-              <dd>Pour la sécurité, UNIQUEMENT par virement bancaire, endéans les trois jours après votre commande. Passé ce délai, cette commande est annulée et les places remises à la réservation.</dd>
+              <dd>Ja. Deze gegevens onontbeerlijk om de goede uitvoering van uw bestelling te verzekeren.</dd>
 
-              <dt>Comment vais-je recevoir mes places ?</dt>
-              <dd>Par voie postale, 6 jours après réception de votre paiement.</dd>
 
-              <dt>Comment puis-je suivre l'exécution de ma commande ?</dt>
-              <dd>En cliquant sur MES RESERVATIONS dans le menu après s'être connecté.</dd>             
+              <dt>Welk is het betalingsmiddel?</dt>
+
+              <dd>Voor alle veiigheig, enkel door bank overschrijving binnen de drie dagen na uw bestelling. Deze tijdspanne voorbij wordt uw bestelling ongedaan gemaakt en komen plaatsen weer vrij voor reservatie.</dd>
+
+              <dt>Hoe ga ik mijne plaatsen bekomen?</dt>
+
+              <dd>Via de post 6 dagen na ontvangst van uw betaling.</dd>
+
+
+              <dt>Hoe kan ik de uitvoering van mijn bestelling opvolgen?</dt>
+
+              <dd>Door MIJN RESERVATIE aan te klikken in het menu na ingelogd te zijn.</dd>
+
+              
+
             </dl>
             </div>
         </div>
