@@ -69,16 +69,29 @@ $envoye_le = SQL2date($row->envoye_le);
         </div>
         <div class="bloc_principal">
         Madame, Monsieur,<br />
-        Nous avons bien reçu votre paiement de <?= $montant?> € et avons le plaisir de vous faire parvenir:
+        Nous avons bien reçu votre paiement de <br/>
+        We hebben uw betaling van <br />
+        Wir haben ihre Zahlung von <br />
+        We received your payment of <br /><br />
+
+        <b><?= $montant?> € </b><br /><br />
+
+        et avons le plaisir de vous faire parvenir : <br/>
+        ontvangen en hebben het genoegen om u te sturen : <br/>
+        erhalten und das Vergnügen haben Sie senden : <br/>
+        and have the pleasure to send you : <br/><br/>
+
         <ul>
-            <li><?= $type; ?></li>
-            <li><?= $nbplaces ?> adulte(s)</li>
-            <li><?= $nbplacesHalf ?> enfant(s)</li>
-             <li>Bloc: <?= $bloc?></li>
-            <li>Réservé le: <?= $reserve_le?></li>
+            <li>Type/ Type/ Typ/ Type : <?= $type; ?></li>
+            <li>Nombre/ Nummer/ Anzahl / Number : <?= $nbplaces ?> </li>
+             <li>Emplacement/ Plaats / Lage/ Location : <?= $bloc?></li>
+            <li>Réservé le/ Voorbehouden de/ Reserviert die / Reserved the : <?= $reserve_le?></li>
         </ul>
         <div style='height: 20px;'></div>
         En vous remerciant<br />
+        Bedankt,<br />
+        Vielen Dank ,<br />
+        Thanking you,<br />
         </div> <!-- fin bloc principal -->
         <div class="bloc_signature">
             <p>Countrytickets.eu </p>
