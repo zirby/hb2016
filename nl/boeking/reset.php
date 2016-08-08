@@ -5,14 +5,14 @@ session_start();
 //$j = substr($_SESSION['jour'], 3);
 $index = "index".$j.".php";
 if(isset($_GET['id']) && isset($_GET['token'])){
-    require 'inc/conn.php';
-    $req = $pdo->prepare("SELECT * FROM cd16_users WHERE id = ? and reset_token = ? AND reset_at > DATE_SUB(NOW(), INTERVAL '30' MINUTE)");
+    require '../../inc/conn.php';
+    $req = $pdo->prepare("SELECT * FROM hb16_users WHERE id = ? and reset_token = ? AND reset_at > DATE_SUB(NOW(), INTERVAL '30' MINUTE)");
     $req->execute([$_GET['id'], $_GET['token']]);
     $user = $req->fetch();
     if($user){
         if(!empty($_POST) && $_POST['password'] == $_POST['passwordConfirm']){
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-            $req = $pdo->prepare("UPDATE cd16_users SET password = ?, reset_token = NULL, reset_at = NULL  WHERE id=?");
+            $req = $pdo->prepare("UPDATE hb16_users SET password = ?, reset_token = NULL, reset_at = NULL  WHERE id=?");
             $req->execute([$password, $user->id]);
             $_SESSION['flash']['success'] = "het wachtwoord in om met succes opnieuw in te stellen";
             $_SESSION['auth'] = $user;

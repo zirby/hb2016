@@ -7,7 +7,7 @@ $index = "index.php";
 if(!empty($_POST)){
     
     $errors = array();
-    require 'inc/conn.php';
+    require '../../inc/conn.php';
     
     if(empty($_POST['lastname'])){$errors['lastname']="Entrez votre nom";}
     if(empty($_POST['firstname'])){$errors['firstname']="Entrez votre prénom";}
@@ -18,7 +18,7 @@ if(!empty($_POST)){
     if(empty($_POST['inputEmail']) || !filter_var($_POST['inputEmail'], FILTER_VALIDATE_EMAIL)){
         $errors['email']="Votre e-mail n'est pas valide";
     }else{
-        $req = $pdo->prepare("SELECT id FROM cd16_users WHERE email = ?");
+        $req = $pdo->prepare("SELECT id FROM hb16_users WHERE email = ?");
         $req->execute([$_POST['inputEmail']]);
         $user = $req->fetch();
         if($user){
@@ -31,13 +31,13 @@ if(!empty($_POST)){
     }
     if (empty($errors)){
         
-        $req = $pdo->prepare("INSERT INTO cd16_users SET firstname = ?,lastname = ?,address = ?,code = ?,localite = ?,country=?,telephone = ?, email = ?, password = ? ");
+        $req = $pdo->prepare("INSERT INTO hb16_users SET firstname = ?,lastname = ?,address = ?,code = ?,localite = ?,country=?,telephone = ?, email = ?, password = ? ");
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         
         $req->execute([$_POST['firstname'],$_POST['lastname'],$_POST['inputAdr'],$_POST['inputZip'],$_POST['inputLocal'],$_POST['inputPays'],$_POST['inputPhone'], $_POST['inputEmail'], $password]);
         $user_id = $pdo->lastInsertId();
         //mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://localhost/coupe_davis_2016/confirm.php?id={$user_id}&token=$token");
-        $reqS = $pdo->prepare("SELECT * FROM cd16_users WHERE id = ?");
+        $reqS = $pdo->prepare("SELECT * FROM hb16_users WHERE id = ?");
         $reqS->execute([$user_id]);
         $user = $reqS->fetch();
         $_SESSION['auth'] = $user;

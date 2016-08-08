@@ -9,7 +9,7 @@ $req->execute();
 
 while($res = $req->fetch()){
     $reqReserv = $pdo->prepare("SELECT SUM(r.nbplaces) as splaces, SUM(r.nbplaces_half) as splaces_half FROM hb16_reservations as r, hb16_users as u WHERE r.user_id= u.id AND r.bloc=? AND u.lastname=?  GROUP BY r.bloc ");
-    //$reqReserv = $pdo->prepare("SELECT SUM(nbplaces) as splaces, SUM(nbplaces_half) as splaces_half FROM cd16_reservations WHERE (bloc=? AND jour =? AND supprime_le IS NULL) OR (bloc=? AND jour='ABN3J' AND supprime_le IS NULL)");
+    //$reqReserv = $pdo->prepare("SELECT SUM(nbplaces) as splaces, SUM(nbplaces_half) as splaces_half FROM hb16_reservations WHERE (bloc=? AND jour =? AND supprime_le IS NULL) OR (bloc=? AND jour='ABN3J' AND supprime_le IS NULL)");
     $reqReserv->execute(array($res->name, $org));
     $resReserv = $reqReserv->fetch();
     if($resReserv){

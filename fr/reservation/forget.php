@@ -21,7 +21,7 @@ if(!empty($_POST) && !empty($_POST['email']) ){
         $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
         $headers .= 'From: "Countrytickets.eu"<'.$expediteur.'>'."\n"; // Expediteur
         $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
-        $message = '<div style="width: 100%; text-align: center; font-weight: bold">Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien<br />http://Countrytickets.eu/Coupe_Davis_2016/reset.php?id='.$user->id.'&token='.$reset_token.'</div>';
+        $message = '<div style="width: 100%; text-align: center; font-weight: bold">Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien<br />http://Countrytickets.eu/Hand_2016/fr/reservation/reset.php?id='.$user->id.'&token='.$reset_token.'</div>';
         if (mail($destinataire, $objet, $message, $headers)){        
             header('Location: login.php');
             exit();

@@ -21,7 +21,7 @@ if(!empty($_POST) && !empty($_POST['email']) ){
         $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
         $headers .= 'From: "Countrytickets.eu"<'.$expediteur.'>'."\n"; // Expediteur
         $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
-        $message = '<div style="width: 100%; text-align: center; font-weight: bold">Om uw wachtwoord opnieuw in te stellen, dank u om te klikken op deze link<br />http://Countrytickets.eu/Hand_2016/reset.php?id='.$user->id.'&token='.$reset_token.'</div>';
+        $message = '<div style="width: 100%; text-align: center; font-weight: bold">Om uw wachtwoord opnieuw in te stellen, dank u om te klikken op deze link<br />http://Countrytickets.eu/Hand_2016/de/buchung/reset.php?id='.$user->id.'&token='.$reset_token.'</div>';
         if (mail($destinataire, $objet, $message, $headers)){        
             header('Location: login.php');
             exit();
