@@ -54,7 +54,7 @@ $envoye_le = SQL2date($row->envoye_le);
             e-mail: info@countrytickets.eu<br />
 
             <div style='height: 50px;'></div>
-            <h4>HANDBALL 2016 : BELGIQUE - FRANCE</h4><br />
+            <h4>HANDBALL : Belgique-France (Qualification Euro 2018)</h4><br />
             ---<br />
             <h1>N° <?= $id?></h1><br />
         </div>

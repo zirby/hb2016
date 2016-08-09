@@ -35,8 +35,8 @@ while($res = $req->fetch()){
 
 ?>
 <?php require 'inc/header.php'; ?>
-<h2>HandBall 2016</h2>
-<h3><span style="color: red">Belgique -- France</span></h3>
+<h2>HandBall</h2>
+<h3><span style="color: red">Belgique-France (Qualification Euro 2018)</span></h3>
 
 <div class="col-md-8">
 <img src="../../img/hb2016_600_z.jpg" alt="la salle" class="img-rounded displayed" usemap="#map-hb2016_600"/>
