@@ -1,5 +1,6 @@
 body{
     font-family: "Times", serif;
+    padding-left: 30px;
 }
 .bloc_entete{
     float: left;

@@ -60,7 +60,7 @@ $envoye_le = SQL2date($row->envoye_le);
         </div>
         <div class="bloc_date_adresse">
             <p>Liège, le <?= $today; ?></P>
-            <div style='height: 60px;'></div>
+            <div style='height: 10px;'></div>
             <p>N°: <?= $id?></p>
             <?= $name?> <?= $firstname?><br />
             <?= $adresse?><br />
@@ -68,23 +68,27 @@ $envoye_le = SQL2date($row->envoye_le);
            <?= $pays?>
         </div>
         <div class="bloc_principal">
+        <b>Votre paiement/Uw betaling/Ihre Zahlung/Your payment : <?= $montant?> € </b><br /><br />
         Madame, Monsieur,<br />
-        Nous avons bien reçu votre paiement de <br/>
-        We hebben uw betaling van <br />
-        Wir haben ihre Zahlung von <br />
-        We received your payment of <br /><br />
+        Mevrouw, Mijnheer,<br />
+        Frau, Herr,<br />
+        Dear,<br /><br />
 
-        <b><?= $montant?> € </b><br /><br />
+        Nous avons bien reçu votre paiement et avons le plaisir de vous faire parvenir : <br/>
+        We hebben uw betaling ontvangen en hebben het genoegen om u te sturen : <br/>
+        Wir haben ihre Zahlung erhalten und das Vergnügen haben Sie senden : <br/>
+        We received your payment and have the pleasure to send you : <br/><br/>
 
-        et avons le plaisir de vous faire parvenir : <br/>
-        ontvangen en hebben het genoegen om u te sturen : <br/>
-        erhalten und das Vergnügen haben Sie senden : <br/>
-        and have the pleasure to send you : <br/><br/>
+       
+
+        
+        
+        
+        
 
         <ul>
-            <li>Type/ Type/ Typ/ Type : <?= $type; ?></li>
             <li>Nombre/ Nummer/ Anzahl / Number : <?= $nbplaces ?> </li>
-             <li>Emplacement/ Plaats / Lage/ Location : <?= $bloc?></li>
+            <li>Emplacement/ Plaats / Lage/ Location : <?= $bloc?></li>
             <li>Réservé le/ Voorbehouden de/ Reserviert die / Reserved the : <?= $reserve_le?></li>
         </ul>
         <div style='height: 20px;'></div>
