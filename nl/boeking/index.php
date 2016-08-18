@@ -35,7 +35,7 @@ while($res = $req->fetch()){
 
 ?>
 <?php require 'inc/header.php'; ?>
-<h2>HandBall</h2>
+<h2>06 NOV 2016</h2>
 <h3><span style="color: red">Belgique-France (Qualification Euro 2018)</span></h3>
 
 <div class="col-md-8">
