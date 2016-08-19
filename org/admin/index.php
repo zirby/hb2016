@@ -53,8 +53,6 @@ if(isset($_POST['btnSearchNom'])){
 <area id="bloc_b" alt="" title="" href="#" shape="rect" coords="158,223,207,260" />
 <area id="bloc_c" alt="" title="" href="#" shape="rect" coords="160,181,205,218" />
 <area id="bloc_d" alt="" title="" href="#" shape="rect" coords="156,91,209,175" />
-<area id="bloc_e" alt="" title="" href="#" shape="rect" coords="218,180,245,221" />
-<area id="bloc_f" alt="" title="" href="#" shape="rect" coords="217,265,244,324" />
 <area id="bloc_g" alt="" title="" href="#" shape="rect" coords="153,61,228,85" />
 <area id="bloc_h" alt="" title="" href="#" shape="rect" coords="229,60,304,84" />
 <area id="bloc_i" alt="" title="" href="#" shape="rect" coords="307,60,382,84" />
@@ -65,30 +63,26 @@ if(isset($_POST['btnSearchNom'])){
 <area id="bloc_n" alt="" title="" href="#" shape="rect" coords="478,196,532,244" />
 <area id="bloc_o" alt="" title="" href="#" shape="rect" coords="478,246,532,294" />
 <area id="bloc_p" alt="" title="" href="#" shape="rect" coords="478,299,532,347" />
-<area id="bloc_q" alt="" title="" href="#" shape="rect" coords="442,123,472,213" />
-<area id="bloc_r" alt="" title="" href="#" shape="rect" coords="442,225,472,315" />
-<area id="bloc_s" alt="" title="" href="#" shape="rect" coords="463,356,526,381" />
+<!--<area id="bloc_s" alt="" title="" href="#" shape="rect" coords="463,356,526,381" />-->
 <area id="bloc_t" alt="" title="" href="#" shape="rect" coords="388,369,437,400" />
 <area id="bloc_u" alt="" title="" href="#" shape="rect" coords="300,368,387,399" />
 <area id="bloc_v" alt="" title="" href="#" shape="rect" coords="253,367,302,398" />
-<area id="bloc_x" alt="" title="" href="#" shape="rect" coords="160,357,220,381" />
+<!-- <area id="bloc_x" alt="" title="" href="#" shape="rect" coords="160,357,220,381" />-->
 <area id="bloc_a_sup" alt="" title="" href="#" shape="rect" coords="94,312,130,374" />
 <area id="bloc_b_sup" alt="" title="" href="#" shape="rect" coords="94,245,130,307" />
 <area id="bloc_c_sup" alt="" title="" href="#" shape="rect" coords="94,178,130,240" />
 <area id="bloc_d_sup" alt="" title="" href="#" shape="rect" coords="94,109,130,171" />
 <area id="bloc_e_sup" alt="" title="" href="#" shape="rect" coords="93,43,129,105" />
-<area id="bloc_g_sup" alt="" title="" href="#" shape="rect" coords="135,13,214,43" />
+<!-- <area id="bloc_g_sup" alt="" title="" href="#" shape="rect" coords="135,13,214,43" />
 <area id="bloc_h_sup" alt="" title="" href="#" shape="rect" coords="219,15,298,45" />
 <area id="bloc_i_sup" alt="" title="" href="#" shape="rect" coords="305,14,384,44" />
 <area id="bloc_j_sup" alt="" title="" href="#" shape="rect" coords="388,15,467,45" />
-<area id="bloc_k_sup" alt="" title="" href="#" shape="rect" coords="473,15,552,45" />
+<area id="bloc_k_sup" alt="" title="" href="#" shape="rect" coords="473,15,552,45" />-->
 <area id="bloc_l_sup" alt="" title="" href="#" shape="rect" coords="560,42,592,103" />
 <area id="bloc_m_sup" alt="" title="" href="#" shape="rect" coords="561,109,593,170" />
 <area id="bloc_n_sup" alt="" title="" href="#" shape="rect" coords="560,177,592,238" />
 <area id="bloc_o_sup" alt="" title="" href="#" shape="rect" coords="558,242,590,303" />
 <area id="bloc_p_sup" alt="" title="" href="#" shape="rect" coords="558,315,590,376" />
-<area id="bloc_e0" alt="" title="" href="#" shape="rect" coords="217,118,244,177" />
-<area id="bloc_f0" alt="" title="" href="#" shape="rect" coords="217,222,244,263" />
 </map>
 
 </div>
