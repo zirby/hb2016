@@ -39,8 +39,8 @@ if(!empty($_POST) && !empty($_POST['email']) ){
 <?php require 'inc/header.php'; ?>
 <form action="" method="POST" class="form-horizontal">
   <fieldset>
-    <legend><h1>Wachtwoord vergeten</h1></legend>
-    <p>Wachtwoord herinnering aan de instructies zal worden verzonden per e-mail</p>
+    <legend><h1>Passwort vergessen?</h1></legend>
+    <p>Passwort Erinnerung an die Anweisungen werden per E-Mail gesendet werden</p>
     <?php if(!empty($errors)):?>
             <?php  foreach($errors as $error): ?>
                 <?= $error; ?>
