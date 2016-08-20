@@ -44,7 +44,7 @@ if(isset($_SESSION['resId'])){
                 <b>IBAN: BE54 0017 9153 1897 - BIC: GEBABEBB</b><br />
                 met in mededeling: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
                 <p>binnen de 3 dagen. Bij het overschrijden van deze termijn , zal uw reservering automatisch geannuleerd worden.</p>
-                <p>Uw tickets zal u per post ontvangen, na 15/09 na ontvangst van uw betaling.</p>
+                <p>Uw tickets zal u per post ontvangen, na 1/10 .</p>
                 <p>*** Gelieve dit document af te drukken aub. ***</p>
                 <p>BEDANKT VOOR UW BESTELLING</p>
                 

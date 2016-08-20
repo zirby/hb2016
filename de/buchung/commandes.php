@@ -43,7 +43,7 @@ if(isset($_SESSION['resId'])){
                 <b>IBAN: BE54 0017 9153 1897 - BIC: GEBABEBB</b><br />
                 Mit Referenz: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
                 <p>Innerhalb von 3 Tagen. Bei Verstreichung diese Frist wird Ihre Reservierung automatische annulliert.</p>
-                <p>Ihre Tickets werden Ihnen auf dem Postweg nach 15.09 nach Eingang Ihrer Zahlung gesendet.</p>
+                <p>Ihre Tickets werden Ihnen auf dem Postweg nach 01.10 gesendet.</p>
                 <p>*** Drucken Sie bitte dieses Dokument aus. ***</p>
                 <p>DANKE FüR IHRE BESTELLUNG</p>
                 

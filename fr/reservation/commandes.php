@@ -43,7 +43,7 @@ if(isset($_SESSION['resId'])){
                 <b>IBAN: BE54 0017 9153 1897 - BIC: GEBABEBB</b><br />
                 avec en référence: <b><?= $reservationId; ?> - <?= $_SESSION['auth']->lastname; ?></b></p>
                 <p>endéans les 3 jours. Passé ce délai, votre réservation sera automatiquement annulée.</p>
-                <p>Les tickets vous seront envoyées par voie postale après le 15/09 après réception de votre paiement.</p>
+                <p>Les tickets vous seront envoyés par voie postale après le 1/10 .</p>
                 <p>*** IMPRIMER CE DOCUMENT SVP ***</p>
                 <p>MERCI DE VOTRE COMMANDE</p>
                 

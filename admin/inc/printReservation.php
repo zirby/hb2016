@@ -79,15 +79,9 @@ $envoye_le = SQL2date($row->envoye_le);
         Wir haben ihre Zahlung erhalten und das Vergnügen haben Sie senden : <br/>
         We received your payment and have the pleasure to send you : <br/><br/>
 
-       
-
-        
-        
-        
-        
 
         <ul>
-            <li>Nombre/ Nummer/ Anzahl / Number : <?= $nbplaces ?> </li>
+            <li>Nombre/ Nummer/ Anzahl / Number : <?= $nbplaces ?> ticket(s)</li>
             <li>Emplacement/ Plaats / Lage/ Location : <?= $bloc?></li>
             <li>Réservé le/ Voorbehouden de/ Reserviert die / Reserved the : <?= $reserve_le?></li>
         </ul>
