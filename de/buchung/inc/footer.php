@@ -28,7 +28,7 @@
             <dd>	Aus Sicherheitsgründen einzig per Bankanweisung innert dreier Tage nach Bestellungsaufgabe. Erfolgt in diesem Zeitraum keine Bezahlung, wird die Bestellung gelöscht und die Plätze werden für den Verkauf freigegeben. </dd>
 
             <dt>	Wie komme ich zu meinen Platzkarten? </dt>
-            <dd>	Par Post; sechs Tage nach Eingang der Bezahlung. </dd>
+            <dd>	Par Post; sechs Tage nach Eingang der Bezahlung, wenn nicht anders angegeben. </dd>
 
             <dt>	Wie kann ich den Stand der Ausführung meiner Bestellung mitverfolgen? </dd>
             <dd>	Indem Sie auf « meine Reservationen » klicken, nachdem Sie sich eingeloggt haben. </dd>

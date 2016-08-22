@@ -28,7 +28,7 @@
               <dd>Pour la sécurité, UNIQUEMENT par virement bancaire, endéans les trois jours après votre commande. Passé ce délai, cette commande est annulée et les places remises à la réservation.</dd>
 
               <dt>Comment vais-je recevoir mes places ?</dt>
-              <dd>Par voie postale, 6 jours après réception de votre paiement.</dd>
+              <dd>Par voie postale, 6 jours après réception de votre paiement, sauf indication contraire.</dd>
 
               <dt>Comment puis-je suivre l'exécution de ma commande ?</dt>
               <dd>En cliquant sur MES RESERVATIONS dans le menu après s'être connecté.</dd>

@@ -37,7 +37,7 @@
 
               <dt>Hoe ga ik mijne plaatsen bekomen?</dt>
 
-              <dd>Via de post 6 dagen na ontvangst van uw betaling.</dd>
+              <dd>Via de post 6 dagen na ontvangst van uw betaling, tenzij anders aangegeven.</dd>
 
 
               <dt>Hoe kan ik de uitvoering van mijn bestelling opvolgen?</dt>
