@@ -48,6 +48,7 @@
             <li><a href="places.php">Places</a></li>
             <li><a href="users.php">Spectateurs</a></li>
             <li><a href="reserv.php">Nb.Réserv.</a></li>
+            <li><a href="rapport.php">Rapport</a></li>
           </ul>
         </div>
       </div>
