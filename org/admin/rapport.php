@@ -2,38 +2,78 @@
 
 require_once '../../inc/conn.php';
 
-// faire doDispo ORG avec IDENTIFIANT de ORGANISATEUR
-$org = 'URBH'; // id de l'organisateur
-$req = $pdo->prepare("SELECT * FROM hb16_blocs" );
+/* ********************************* 25 ***************************/
+$req = $pdo->prepare("select sum(r.nbplaces) as nb25 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 25 " );
 $req->execute();
+$pl25 = $req->fetch();
+$nb25 = intval($pl25->nb25);
 
-while($res = $req->fetch()){
-    $reqReserv = $pdo->prepare("SELECT SUM(r.nbplaces) as splaces, SUM(r.nbplaces_half) as splaces_half FROM hb16_reservations as r, hb16_users as u WHERE r.user_id= u.id AND r.bloc=? AND u.lastname=?  GROUP BY r.bloc ");
-    //$reqReserv = $pdo->prepare("SELECT SUM(nbplaces) as splaces, SUM(nbplaces_half) as splaces_half FROM hb16_reservations WHERE (bloc=? AND jour =? AND supprime_le IS NULL) OR (bloc=? AND jour='ABN3J' AND supprime_le IS NULL)");
-    $reqReserv->execute(array($res->name, $org));
-    $resReserv = $reqReserv->fetch();
-    if($resReserv){
-        $somme = intval($resReserv->splaces) + intval($resReserv->splaces_half);
-        $valeur = intval($res->max_org) - intval($somme);
-        $reqUpdate=$pdo->prepare("UPDATE hb16_blocs SET places_org=? WHERE name=?" );
-        $reqUpdate->execute(array($valeur, $res->name));
-    }else{
-        $reqUpdate=$pdo->prepare("UPDATE hb16_blocs SET places_org=max_org WHERE name=?" );
-        $reqUpdate->execute(array($res->name));
-    }
-   
-}
-
-// faire la liste des réservations
-$req = $pdo->prepare("SELECT  *, r.id as rid FROM hb16_reservations as r, hb16_users as u WHERE r.user_id= u.id AND u.lastname='".$org."'  ORDER BY r.id DESC  ");
+$req = $pdo->prepare("select sum(r.nbplaces) as nbp25, sum(r.montant) as mnt25 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 25 and r.paye_le is not null" );
 $req->execute();
+$pl25 = $req->fetch();
+$mnt25 = floatval($pl25->mnt25);
+$nbp25 = intval($pl25->nbp25);
+$cap25 = floatval($nbp25)*2.42;
+$org25 = floatval($mnt25)-floatval($cap25);
 
 
-if(isset($_POST['btnSearchNom'])){
-    $req = $pdo->prepare("SELECT  *, r.id as rid FROM hb16_reservations as r, hb16_users as u WHERE r.user_id= u.id AND u.firstname like '".$_POST['searchNom']."%' AND u.lastname='".$org."'  ORDER BY r.id DESC  ");
-    $req->execute();
-}
+/* ********************************* 20 ***************************/
+$req = $pdo->prepare("select sum(r.nbplaces) as nb20 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 20 " );
+$req->execute();
+$pl20 = $req->fetch();
+$nb20 = intval($pl20->nb20);
 
+$req = $pdo->prepare("select sum(r.nbplaces) as nbp20, sum(r.montant) as mnt20 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 20 and r.paye_le is not null" );
+$req->execute();
+$pl20 = $req->fetch();
+$mnt20 = floatval($pl20->mnt20);
+$nbp20 = intval($pl20->nbp20);
+$cap20 = floatval($nbp20)*2.42;
+$org20 = floatval($mnt20)-floatval($cap20);
+
+/* ********************************* 15 ***************************/
+$req = $pdo->prepare("select sum(r.nbplaces) as nb15 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 15 " );
+$req->execute();
+$pl15 = $req->fetch();
+$nb15 = intval($pl15->nb15);
+
+$req = $pdo->prepare("select sum(r.nbplaces) as nbp15, sum(r.montant) as mnt15 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 15 and r.paye_le is not null" );
+$req->execute();
+$pl15 = $req->fetch();
+$mnt15 = floatval($pl15->mnt15);
+$nbp15 = intval($pl15->nbp15);
+$cap15 = floatval($nbp15)*2.42;
+$org15 = floatval($mnt15)-floatval($cap15);
+
+/* ********************************* 10 ***************************/
+$req = $pdo->prepare("select sum(r.nbplaces) as nb10 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 10 " );
+$req->execute();
+$pl10 = $req->fetch();
+$nb10 = intval($pl10->nb10);
+
+$req = $pdo->prepare("select sum(r.nbplaces) as nbp10, sum(r.montant) as mnt10 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 10 and r.paye_le is not null" );
+$req->execute();
+$pl10 = $req->fetch();
+$mnt10 = floatval($pl10->mnt10);
+$nbp10 = intval($pl10->nbp10);
+$cap10 = floatval($nbp10)*2.42;
+$org10 = floatval($mnt10)-floatval($cap10);
+
+/* ********************************* org ***************************/
+$req = $pdo->prepare("select sum(nbplaces) as nborg from hb16_reservations  where  type like 'VIP' " );
+$req->execute();
+$plorg = $req->fetch();
+$nborg = intval($plorg->nborg);
+$caporg = floatval($nborg)*1.21;
+
+/* ********************************* SUM ***************************/
+$sumnb = $nb25 + $nb20 + $nb15 + $nb10;
+$sumnbp = $nbp25 + $nbp20 + $nbp15 + $nbp10;
+$summnt = $mnt25 + $mnt20 + $mnt15 + $mnt10;
+$sumcap = $cap25 + $cap20 + $cap15 + $cap10;
+$sumcapcap = $sumcap + $caporg;
+$sumorg = $org25 + $org20 + $org15 + $org10;
+$sumorgorg = $summnt - $sumcapcap;
 
 ?>
 <?php require 'inc/header.php'; ?>
@@ -86,69 +126,69 @@ if(isset($_POST['btnSearchNom'])){
             <tr>
                 <td style="text-align: left;">Cat. 1 (25€)</td>
                 <td style="text-align: left;"></td>
-                <td style="text-align: left;">1</td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;"><?= $nb25; ?></td>
+                <td style="text-align: left;"><?= $nbp25; ?></td>
 
-                <td style="text-align: right;">25.00€</td>
-                <td style="text-align: right;">22.58€</td>
-                <td style="text-align: right;">2.42€</td>
+                <td style="text-align: right;"><?= $mnt25; ?>€</td>
+                <td style="text-align: right;"><?= $org25; ?>€</td>
+                <td style="text-align: right;"><?= $cap25; ?>€</td>
              </tr>
             <tr>
                 <td style="text-align: left;">Cat. 2 (20€)</td>
                 <td style="text-align: left;"></td>
-                <td style="text-align: left;">2</td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;"><?= $nb20; ?></td>
+                <td style="text-align: left;"><?= $nbp20; ?></td>
 
-                <td style="text-align: right;">20.00€</td>
-                <td style="text-align: right;">17.58€</td>
-                <td style="text-align: right;">2.42€</td>
+                <td style="text-align: right;"><?= $mnt20; ?>€</td>
+                <td style="text-align: right;"><?= $org20; ?>€</td>
+                <td style="text-align: right;"><?= $cap20; ?>€</td>
              </tr>
             <tr>
                 <td style="text-align: left;">Cat. 3 (15€)</td>
                 <td style="text-align: left;"></td>
-                <td style="text-align: left;">3</td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;"><?= $nb15; ?></td>
+                <td style="text-align: left;"><?= $nbp15; ?></td>
 
-                <td style="text-align: right;">15.00€</td>
-                <td style="text-align: right;">12.58€</td>
-                <td style="text-align: right;">2.42€</td>
+                <td style="text-align: right;"><?= $mnt15; ?>€</td>
+                <td style="text-align: right;"><?= $org15; ?>€</td>
+                <td style="text-align: right;"><?= $cap15; ?>€</td>
              </tr>
             <tr>
                 <td style="text-align: left;">Cat. 4 (10€)</td>
                 <td style="text-align: left;"></td>
-                <td style="text-align: left;">4</td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;"><?= $nb10; ?></td>
+                <td style="text-align: left;"><?= $nbp10; ?></td>
 
-                <td style="text-align: right;">10.00€</td>
-                <td style="text-align: right;">7.58€</td>
-                <td style="text-align: right;">2.42€</td>
+                <td style="text-align: right;"><?= $mnt10; ?>€</td>
+                <td style="text-align: right;"><?= $org10; ?>€</td>
+                <td style="text-align: right;"><?= $cap10; ?>€</td>
              </tr>
             <tr  class="success">
                 <th colspan="2" style="text-align: right;"><b>TOTAL: </b></th>
 
-                <th style="text-align: left;">10</th>
-                <th style="text-align: left;">4</th>
-                <th style="text-align: right;">70.00€</th>
-                <th style="text-align: right;">60.32€</th>
-                <th style="text-align: right;">9.68€</th>
+                <th style="text-align: left;"><?= $sumnb; ?></th>
+                <th style="text-align: left;"><?= $sumnbp; ?></th>
+                <th style="text-align: right;"><?= $summnt; ?>€</th>
+                <th style="text-align: right;"><?= $sumorg; ?>€</th>
+                <th style="text-align: right;"><?= $sumcap; ?>€</th>
              </tr>
             <tr>
                 <td style="text-align: left;">ORG</td>
-                <td style="text-align: left;">1</td>
+                <td style="text-align: left;"><?= $nborg; ?></td>
                 <td style="text-align: left;"></td>
                 <td style="text-align: left;"></td>
 
                 <td style="text-align: right;"></td>
                 <td style="text-align: right;"></td>
-                <td style="text-align: right;">1.21€</td>
+                <td style="text-align: right;"><?= $caporg; ?>€</td>
              </tr>
             <tr  class="danger">
                 <th colspan="6" style="text-align: right;"><b>TOTAL COUNTRYTICKETS.EU: </b></th>
-                <th style="text-align: right;">10.89€</th>
+                <th style="text-align: right;"><?= $sumcapcap; ?>€</th>
              </tr>
            <tr class="danger">
                 <th colspan="6" style="text-align: right;"><b>TOTAL ORGANISATEURS: </b></th>
-                <th style="text-align: right;">59.11€</th>
+                <th style="text-align: right;"><?= $sumorgorg; ?>€</th>
              </tr>
 
 

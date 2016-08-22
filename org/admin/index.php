@@ -122,7 +122,7 @@ if(isset($_POST['btnSearchNom'])){
                 <!--<input id="inputType" type="text" class="form-control" value="0">-->
                 <select id="inputType" class="form-control">
                     <option>VIP</option>
-                     <option>Guest</option>
+                     
                 </select>
             </div>
         </div>
