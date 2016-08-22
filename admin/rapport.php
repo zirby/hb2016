@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../inc/conn.php';
+require_once '../inc/conn.php';
 
 /* ********************************* 25 ***************************/
 $req = $pdo->prepare("select sum(r.nbplaces) as nb25 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 25 " );
