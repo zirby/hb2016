@@ -3,7 +3,7 @@
 require_once '../inc/conn.php';
 
 /* ********************************* 25 ***************************/
-$req = $pdo->prepare("select sum(r.nbplaces) as nb25 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 25 " );
+$req = $pdo->prepare("select sum(r.nbplaces) as nb25 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 25 and supprime_le is null " );
 $req->execute();
 $pl25 = $req->fetch();
 $nb25 = intval($pl25->nb25);
@@ -18,7 +18,7 @@ $org25 = floatval($mnt25)-floatval($cap25);
 
 
 /* ********************************* 20 ***************************/
-$req = $pdo->prepare("select sum(r.nbplaces) as nb20 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 20 " );
+$req = $pdo->prepare("select sum(r.nbplaces) as nb20 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 20 and supprime_le is null " );
 $req->execute();
 $pl20 = $req->fetch();
 $nb20 = intval($pl20->nb20);
@@ -32,7 +32,7 @@ $cap20 = floatval($nbp20)*2.42;
 $org20 = floatval($mnt20)-floatval($cap20);
 
 /* ********************************* 15 ***************************/
-$req = $pdo->prepare("select sum(r.nbplaces) as nb15 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 15 " );
+$req = $pdo->prepare("select sum(r.nbplaces) as nb15 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 15 and supprime_le is null " );
 $req->execute();
 $pl15 = $req->fetch();
 $nb15 = intval($pl15->nb15);
@@ -46,7 +46,7 @@ $cap15 = floatval($nbp15)*2.42;
 $org15 = floatval($mnt15)-floatval($cap15);
 
 /* ********************************* 10 ***************************/
-$req = $pdo->prepare("select sum(r.nbplaces) as nb10 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 10 " );
+$req = $pdo->prepare("select sum(r.nbplaces) as nb10 from hb16_reservations as r, hb16_blocs as b where r.bloc = b.name and b.price = 10 and supprime_le is null " );
 $req->execute();
 $pl10 = $req->fetch();
 $nb10 = intval($pl10->nb10);
