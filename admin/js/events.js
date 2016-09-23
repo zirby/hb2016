@@ -111,8 +111,7 @@ $(document).ready(function(){
                 url:'doPlacesReserv.php',
                 success: function(data) {
                         $('#placesModal').modal('toggle')
-                        alert($(this));
-                        //location.href="index.php";
+                        location.href="index.php";
                  }
             });
     });
