@@ -196,6 +196,17 @@ $sumorgorg = $summnt - $sumcapcap;
     </table>
 </div>
 
-
+<div class="col-md-12">
+    <ul class="list-group">
+    <li class="list-group-item">
+        <span class="badge">30.000,00 €</span>
+        Versement organisateur (31/08/2016)
+    </li>
+    <li class="list-group-item">
+        <span class="badge">10.000,00 €</span>
+        Versement organisateur (23/09/2016)
+    </li>
+    </ul>
+</div>
 
 <?php require 'inc/footer.php';
