@@ -55,11 +55,11 @@ while($res = $req->fetch()){
 <area id="bloc_n" alt="" title="" href="#" shape="rect" coords="478,196,532,244" />
 <area id="bloc_o" alt="" title="" href="#" shape="rect" coords="478,246,532,294" />
 <area id="bloc_p" alt="" title="" href="#" shape="rect" coords="478,299,532,347" />
-<!--<area id="bloc_s" alt="" title="" href="#" shape="rect" coords="463,356,526,381" />-->
+<area id="bloc_s" alt="" title="" href="#" shape="rect" coords="463,356,526,381" />
 <area id="bloc_t" alt="" title="" href="#" shape="rect" coords="388,369,437,400" />
 <area id="bloc_u" alt="" title="" href="#" shape="rect" coords="300,368,387,399" />
 <area id="bloc_v" alt="" title="" href="#" shape="rect" coords="253,367,302,398" />
-<!-- <area id="bloc_x" alt="" title="" href="#" shape="rect" coords="160,357,220,381" />-->
+<area id="bloc_x" alt="" title="" href="#" shape="rect" coords="160,357,220,381" />
 <area id="bloc_a_sup" alt="" title="" href="#" shape="rect" coords="94,312,130,374" />
 <area id="bloc_b_sup" alt="" title="" href="#" shape="rect" coords="94,245,130,307" />
 <area id="bloc_c_sup" alt="" title="" href="#" shape="rect" coords="94,178,130,240" />
