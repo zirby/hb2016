@@ -195,6 +195,14 @@ $sumorgorg = $summnt - $sumcapcap;
         </tbody>
     </table>
 </div>
+<div class="col-md-12">
+    <ul class="list-group">
+    <li class="list-group-item">
+        <span class="badge">30.000,00 €</span>
+        Versement organisateur (31/08/2016)
+    </li>
+    </ul>
+</div>
 
 
 
