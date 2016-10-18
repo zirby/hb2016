@@ -85,7 +85,11 @@ if(isset($_POST['btnSearchNom'])){
                 <td style="text-align: right;">
                     <a href="#" class="btn btn-default btn-xs" data-toggle="modal" data-target=".bs-example-modal-sm" data-id="<?= $res->rid; ?>"><span class="glyphicon glyphicon-euro" aria-hidden="true"></span></a>
                     <a href="inc/printReservation.php?id=<?= $res->rid; ?>" class="btn btn-info btn-xs" title="imprimer"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                    <?php if($res->pack_le == null): ?>
                     <a href="#" class="btn btn-success btn-xs" title="attribuer les places" data-toggle="modal" data-target=".bs-places-modal-sm" data-id="<?= $res->rid; ?>" data-jour="<?= $res->jour; ?>" data-nbplaces="<?= $totPlaces; ?>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    <?php else: ?>
+                    <a href="#" class="btn btn-warning btn-xs" title="attribuer les places" data-toggle="modal" data-target=".bs-places-modal-sm" data-id="<?= $res->rid; ?>" data-jour="<?= $res->jour; ?>" data-nbplaces="<?= $totPlaces; ?>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    <?php endif ?>
                     <a href="inc/doEnvoyeLe.php?reserv=<?= $res->rid; ?>" class="btn btn-success btn-xs" title="envoyer"><span class="glyphicon glyphicon-send" aria-hidden="true"></span></a>
                     <a href="inc/doAccepteLe.php?reserv=<?= $res->rid; ?>" class="btn btn-danger btn-xs" title="accepter"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
                     <a href="inc/doSupprimeLe.php?reserv=<?= $res->rid; ?>" class="btn btn-danger btn-xs" title="supprimer"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a>
